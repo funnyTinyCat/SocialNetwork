@@ -1,0 +1,34 @@
+[
+  {
+    "ContainingType": "CwkSocial.Api.Controllers.V1.PostsController",
+    "Method": "GetById",
+    "RelativePath": "api/v1/Posts/{id}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "CwkSocial.Api.Controllers.V2.PostsController",
+    "Method": "GetById",
+    "RelativePath": "api/v2/Posts/{id}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  }
+]

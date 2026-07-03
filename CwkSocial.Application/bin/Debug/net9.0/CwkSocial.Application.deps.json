@@ -1,0 +1,23 @@
+{
+  "runtimeTarget": {
+    "name": ".NETCoreApp,Version=v9.0",
+    "signature": ""
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETCoreApp,Version=v9.0": {
+      "CwkSocial.Application/1.0.0": {
+        "runtime": {
+          "CwkSocial.Application.dll": {}
+        }
+      }
+    }
+  },
+  "libraries": {
+    "CwkSocial.Application/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    }
+  }
+}

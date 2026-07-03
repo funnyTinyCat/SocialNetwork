@@ -1,0 +1,17 @@
+C:\Users\macak\projects\CwkSocial.Api\CwkSocial.Dal\bin\Debug\net9.0\CwkSocial.Dal.deps.json
+C:\Users\macak\projects\CwkSocial.Api\CwkSocial.Dal\bin\Debug\net9.0\CwkSocial.Dal.dll
+C:\Users\macak\projects\CwkSocial.Api\CwkSocial.Dal\bin\Debug\net9.0\CwkSocial.Dal.pdb
+C:\Users\macak\projects\CwkSocial.Api\CwkSocial.Dal\obj\Debug\net9.0\CwkSocial.Dal.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\macak\projects\CwkSocial.Api\CwkSocial.Dal\obj\Debug\net9.0\CwkSocial.Dal.AssemblyInfoInputs.cache
+C:\Users\macak\projects\CwkSocial.Api\CwkSocial.Dal\obj\Debug\net9.0\CwkSocial.Dal.AssemblyInfo.cs
+C:\Users\macak\projects\CwkSocial.Api\CwkSocial.Dal\obj\Debug\net9.0\CwkSocial.Dal.csproj.CoreCompileInputs.cache
+C:\Users\macak\projects\CwkSocial.Api\CwkSocial.Dal\obj\Debug\net9.0\CwkSocial.Dal.dll
+C:\Users\macak\projects\CwkSocial.Api\CwkSocial.Dal\obj\Debug\net9.0\refint\CwkSocial.Dal.dll
+C:\Users\macak\projects\CwkSocial.Api\CwkSocial.Dal\obj\Debug\net9.0\CwkSocial.Dal.pdb
+C:\Users\macak\projects\CwkSocial.Api\CwkSocial.Dal\obj\Debug\net9.0\ref\CwkSocial.Dal.dll
+C:\Users\macak\projects\CwkSocial.Api\CwkSocial.Dal\bin\Debug\net9.0\CwkSocial.Dal.runtimeconfig.json
+C:\Users\macak\projects\CwkSocial.Api\CwkSocial.Dal\bin\Debug\net9.0\Cwk.Domain.dll
+C:\Users\macak\projects\CwkSocial.Api\CwkSocial.Dal\bin\Debug\net9.0\Cwk.Domain.pdb
+C:\Users\macak\projects\CwkSocial.Api\CwkSocial.Dal\obj\Debug\net9.0\CwkSocial.Dal.csproj.AssemblyReference.cache
+C:\Users\macak\projects\CwkSocial.Api\CwkSocial.Dal\obj\Debug\net9.0\CwkSocia.E0B6D75A.Up2Date
+C:\Users\macak\projects\CwkSocial.Api\CwkSocial.Dal\obj\Debug\net9.0\CwkSocial.Dal.genruntimeconfig.cache
