@@ -12,14 +12,16 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Folder Include="Posts\Commands\" />
+    <Folder Include="Models\" />
     <Folder Include="Posts\CommandHandlers\" />
+    <Folder Include="Posts\Commands\" />
     <Folder Include="Posts\QueryHandlers\" />
     <Folder Include="Posts\Queries\" />
-    <Folder Include="UserProfile\Commands\" />
-    <Folder Include="UserProfile\CommandHandlers\" />
-    <Folder Include="UserProfile\QueryHandlers\" />
-    <Folder Include="UserProfile\Queries\" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Cwk.Domain\Cwk.Domain.csproj" />
+    <ProjectReference Include="..\CwkSocial.Dal\CwkSocial.Dal.csproj" />
   </ItemGroup>
 
 </Project>

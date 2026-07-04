@@ -9,3 +9,10 @@ C:\Users\macak\projects\CwkSocial.Api\CwkSocial.Application\obj\Debug\net9.0\Cwk
 C:\Users\macak\projects\CwkSocial.Api\CwkSocial.Application\obj\Debug\net9.0\refint\CwkSocial.Application.dll
 C:\Users\macak\projects\CwkSocial.Api\CwkSocial.Application\obj\Debug\net9.0\CwkSocial.Application.pdb
 C:\Users\macak\projects\CwkSocial.Api\CwkSocial.Application\obj\Debug\net9.0\ref\CwkSocial.Application.dll
+C:\Users\macak\projects\CwkSocial.Api\CwkSocial.Application\obj\Debug\net9.0\CwkSocial.Application.csproj.AssemblyReference.cache
+C:\Users\macak\projects\CwkSocial.Api\CwkSocial.Application\obj\Debug\net9.0\CwkSocial.Application.sourcelink.json
+C:\Users\macak\projects\CwkSocial.Api\CwkSocial.Application\bin\Debug\net9.0\Cwk.Domain.dll
+C:\Users\macak\projects\CwkSocial.Api\CwkSocial.Application\bin\Debug\net9.0\CwkSocial.Dal.dll
+C:\Users\macak\projects\CwkSocial.Api\CwkSocial.Application\bin\Debug\net9.0\Cwk.Domain.pdb
+C:\Users\macak\projects\CwkSocial.Api\CwkSocial.Application\bin\Debug\net9.0\CwkSocial.Dal.pdb
+C:\Users\macak\projects\CwkSocial.Api\CwkSocial.Application\obj\Debug\net9.0\CwkSocia.B48E1D0A.Up2Date

@@ -1,9 +1,11 @@
 
 
+using CwkSocial.Application.UserProfiles.Queries;
 using CwkSocial.Dal;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Versioning;
 using Microsoft.EntityFrameworkCore;
+using System.Reflection;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -29,6 +31,17 @@ builder.Services.AddDbContext<DataContext>(options =>
     options.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection"));
 });
 
+builder.Services.AddAutoMapper(cfg =>
+{
+    cfg.AddMaps(typeof(Program).Assembly);
+ });
+builder.Services.AddMediatR(cfg =>
+{
+    //cfg.RegisterServicesFromAssembly(Assembly.GetExecutingAssembly());
+    //cfg.RegisterServicesFromAssembly(Assembly.GetAssembly(nameof(GetAllUserProfiles)));
+    cfg.RegisterServicesFromAssemblies(typeof(Program).Assembly, typeof(GetAllUserProfiles).Assembly);
+});
+                
 builder.Services.AddOpenApi();
 
 var app = builder.Build();

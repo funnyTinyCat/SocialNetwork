@@ -15,3 +15,4 @@ C:\Users\macak\projects\CwkSocial.Api\CwkSocial.Dal\bin\Debug\net9.0\Cwk.Domain.
 C:\Users\macak\projects\CwkSocial.Api\CwkSocial.Dal\obj\Debug\net9.0\CwkSocial.Dal.csproj.AssemblyReference.cache
 C:\Users\macak\projects\CwkSocial.Api\CwkSocial.Dal\obj\Debug\net9.0\CwkSocia.E0B6D75A.Up2Date
 C:\Users\macak\projects\CwkSocial.Api\CwkSocial.Dal\obj\Debug\net9.0\CwkSocial.Dal.genruntimeconfig.cache
+C:\Users\macak\projects\CwkSocial.Api\CwkSocial.Dal\obj\Debug\net9.0\CwkSocial.Dal.sourcelink.json

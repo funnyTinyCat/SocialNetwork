@@ -9,3 +9,4 @@ C:\Users\macak\projects\CwkSocial.Api\Cwk.Domain\obj\Debug\net9.0\Cwk.Domain.dll
 C:\Users\macak\projects\CwkSocial.Api\Cwk.Domain\obj\Debug\net9.0\refint\Cwk.Domain.dll
 C:\Users\macak\projects\CwkSocial.Api\Cwk.Domain\obj\Debug\net9.0\Cwk.Domain.pdb
 C:\Users\macak\projects\CwkSocial.Api\Cwk.Domain\obj\Debug\net9.0\ref\Cwk.Domain.dll
+C:\Users\macak\projects\CwkSocial.Api\Cwk.Domain\obj\Debug\net9.0\Cwk.Domain.sourcelink.json
