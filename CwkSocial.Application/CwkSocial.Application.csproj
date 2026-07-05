@@ -12,7 +12,6 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Folder Include="Models\" />
     <Folder Include="Posts\CommandHandlers\" />
     <Folder Include="Posts\Commands\" />
     <Folder Include="Posts\QueryHandlers\" />

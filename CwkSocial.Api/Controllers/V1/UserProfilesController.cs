@@ -7,13 +7,15 @@ using CwkSocial.Application.UserProfiles.Commands;
 using CwkSocial.Api.Contracts.UserProfiles.Responses;
 using System.Diagnostics;
 using CwkSocial.Application.UserProfiles.Queries;
+using CwkSocial.Application.Enums;
+using CwkSocial.Api.Contracts.Common;
 
 namespace CwkSocial.Api.Controllers.V1
 {
     [ApiVersion("1.0")]
     [Route(ApiRoutes.baseRoute)]
     [ApiController]
-    public class UserProfilesController : ControllerBase
+    public class UserProfilesController : BaseController
     {
         private readonly IMediator _mediator;
         private readonly IMapper _mapper;
@@ -78,12 +80,16 @@ namespace CwkSocial.Api.Controllers.V1
         public async Task<IActionResult> UpdateUserProfile(string id, UserProfileCreateUpdate profile)
         {
             var command = _mapper.Map<UpdateUserProfileBasicInfo>(profile);
-            command.UserProfileId = Guid.Parse(id);
+             command.UserProfileId = Guid.Parse(id);
 
-            await _mediator.Send(command);
+            var response = await _mediator.Send(command);
+
+            if (response.IsError)
+            {
+                return HandleErrorResponse(response.Errors);
+            }
 
             return NoContent();
         }
-
     }
 }
