@@ -1,8 +1,10 @@
 {
   "version": 2,
-  "dgSpecHash": "PQr40Fai3rk=",
+  "dgSpecHash": "rYgDdqGeL20=",
   "success": true,
   "projectFilePath": "C:\\Users\\macak\\projects\\CwkSocial.Api\\Cwk.Domain\\Cwk.Domain.csproj",
-  "expectedPackageFiles": [],
+  "expectedPackageFiles": [
+    "C:\\Users\\macak\\.nuget\\packages\\fluentvalidation\\12.1.1\\fluentvalidation.12.1.1.nupkg.sha512"
+  ],
   "logs": []
 }

@@ -1,4 +1,6 @@
-﻿using System;
+﻿using Cwk.Domain.Exceptions;
+using Cwk.Domain.Validators.PostValidators;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -19,11 +21,22 @@ namespace Cwk.Domain.Aggregates.PostAggregate
         public DateTime DateCreated { get; private set; }
         public DateTime LastModified  { get; private set; }
 
+        //Factories
+        /// <summary>
+        /// Creates a post comment
+        /// </summary>
+        /// <param name="postId">The ID of the post to which the comment belongs</param>
+        /// <param name="text">Text content of the comment</param>
+        /// <param name="userProfileId">The ID of the user who created the comment</param>
+        /// <returns><see cref="PostComment" /></returns>
+        /// <exception cref="PostCommentNotValidException" >Thrown if the data provided for the post comment is not valid</exception>
 
         // factory method
-        public static PostComment CreaatePostComment(Guid postId, string text, Guid userProfileId)
+        public static PostComment CreatePostComment(Guid postId, string text, Guid userProfileId)
         {
-            return new PostComment
+            var validator = new PostCommentValidator();
+
+            var objToValidate = new PostComment
             {
                 PostId = postId,
                 Text = text,
@@ -31,7 +44,21 @@ namespace Cwk.Domain.Aggregates.PostAggregate
                 DateCreated = DateTime.UtcNow,
                 LastModified = DateTime.UtcNow
             };
-        }
+
+            var validationResult = validator.Validate(objToValidate);
+
+            if (validationResult.IsValid)
+            {
+                return objToValidate;
+            }
+
+            var exception = new PostCommentNotValidException("Post comment is not valid.");
+
+            validationResult.Errors.ForEach(vr =>
+                exception.ValidationErrors.Add(vr.ErrorMessage));
+
+            throw exception;
+        } 
 
         // public methods:
 

@@ -170,3 +170,4 @@ C:\Users\macak\projects\CwkSocial.Api\CwkSocial.Api\bin\Debug\net9.0\Microsoft.E
 C:\Users\macak\projects\CwkSocial.Api\CwkSocial.Api\bin\Debug\net9.0\System.Diagnostics.DiagnosticSource.dll
 C:\Users\macak\projects\CwkSocial.Api\CwkSocial.Api\bin\Debug\net9.0\CwkSocial.Application.dll
 C:\Users\macak\projects\CwkSocial.Api\CwkSocial.Api\bin\Debug\net9.0\CwkSocial.Application.pdb
+C:\Users\macak\projects\CwkSocial.Api\CwkSocial.Api\bin\Debug\net9.0\FluentValidation.dll

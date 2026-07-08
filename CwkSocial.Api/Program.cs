@@ -1,5 +1,6 @@
 
 
+using CwkSocial.Api.Filters;
 using CwkSocial.Application.UserProfiles.Queries;
 using CwkSocial.Dal;
 using Microsoft.AspNetCore.Mvc;
@@ -9,7 +10,11 @@ using System.Reflection;
 
 var builder = WebApplication.CreateBuilder(args);
 
-builder.Services.AddControllers();
+builder.Services.AddControllers(config =>
+{
+    config.Filters.Add(typeof(CwkSocialExceptionHandler));
+    //config.Filters.Add(typeof(ValidateModelAttribute));
+});
 
 // builder.RegisterServices(typeof(Program));
 builder.Services.AddApiVersioning(config =>

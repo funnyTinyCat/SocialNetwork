@@ -4,6 +4,8 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using Cwk.Domain.Aggregates.UserProfileAggregate;
+using Cwk.Domain.Exceptions;
+using Cwk.Domain.Validators.PostValidators;
 
 namespace Cwk.Domain.Aggregates.PostAggregate
 {
@@ -25,22 +27,59 @@ namespace Cwk.Domain.Aggregates.PostAggregate
         public IEnumerable<PostComment> Comments { get { return _comments; } }
         public IEnumerable<PostInteraction> Interactions { get { return _interactions; } }
 
+        /// <summary>
+        /// Creates a new post instance
+        /// </summary>
+        /// <param name="userProfileId">User profile ID</param>
+        /// <param name="textContent">Post content</param>
+        /// <returns><see cref="Post"/></returns>
+        /// <exception cref="PostNotValidException"></exception>
         // factory method
         public static Post CreatePost(Guid userProfileId, string textContent)
         {
-            return new Post
+            var validator = new PostValidator();
+
+            var objToValidate = new Post
             {
                 UserProfileId = userProfileId,
                 TextContent = textContent,
                 CreatedDate = DateTime.UtcNow,
                 LastModified = DateTime.UtcNow
             };
+
+            var validationResult = validator.Validate(objToValidate);
+
+            if (validationResult.IsValid)
+            {
+                return objToValidate;
+            }
+
+            var exception = new PostNotValidException("Post is not valid.");
+
+            validationResult.Errors.ForEach( vr => exception.ValidationErrors.Add(vr.ErrorMessage));
+
+            throw exception;
         }
+
+        /// <summary>
+        /// Updates the post text
+        /// </summary>
+        /// <param name="textContent">The updated post text.</param>
+        /// <exception cref="PostNotValidException" ></exception>
 
         // public methods:
 
         public void UpdatePostText(string textContent)
         {
+            if (string.IsNullOrWhiteSpace(textContent))
+            {
+                var exception = new PostNotValidException("Cannot update post text. Post text is not valid.");
+
+                exception.ValidationErrors.Add("The provided text is either null or contains only white space.");
+
+                throw exception;
+            }
+
             TextContent = textContent;
             LastModified = DateTime.UtcNow;
         }

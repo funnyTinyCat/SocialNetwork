@@ -1,5 +1,8 @@
 ﻿using AutoMapper;
 using Cwk.Domain.Aggregates.UserProfileAggregate;
+using Cwk.Domain.Exceptions;
+using CwkSocial.Application.Enums;
+using CwkSocial.Application.Models;
 using CwkSocial.Application.UserProfiles.Commands;
 using CwkSocial.Dal;
 using MediatR;
@@ -11,7 +14,7 @@ using System.Threading.Tasks;
 
 namespace CwkSocial.Application.UserProfiles.CommandHandlers
 {
-    public class CreateUserCommandHandler : IRequestHandler<CreateUserCommand, UserProfile>
+    public class CreateUserCommandHandler : IRequestHandler<CreateUserCommand, OperationResult<UserProfile>>
     {
         private readonly DataContext _context;
 
@@ -19,17 +22,51 @@ namespace CwkSocial.Application.UserProfiles.CommandHandlers
         {
             _context = context;
         }
-        public async Task<UserProfile> Handle(CreateUserCommand request, CancellationToken cancellationToken)
+        public async Task<OperationResult<UserProfile>> Handle(CreateUserCommand request, CancellationToken cancellationToken)
         {
-            var basicInfo = BasicInfo.CreateBasicInfo(request.FirstName, request.LastName, request.EmailAddress, 
-                    request.Phone, request.DateOfBirth, request.CurrentCity);
+            var result = new OperationResult<UserProfile>();
 
-            var userProfile = UserProfile.CreateUserProfile(Guid.NewGuid().ToString(), basicInfo);
+            try
+            {
 
-            _context.UserProfiles.Add(userProfile);
-            await _context.SaveChangesAsync();
+                var basicInfo = BasicInfo.CreateBasicInfo(request.FirstName, request.LastName, request.EmailAddress,
+                        request.Phone, request.DateOfBirth, request.CurrentCity);
 
-            return userProfile;
+                var userProfile = UserProfile.CreateUserProfile(Guid.NewGuid().ToString(), basicInfo);
+
+                _context.UserProfiles.Add(userProfile);
+                await _context.SaveChangesAsync();
+
+                result.Payload = userProfile;
+
+                return result;
+            }
+            catch (UserProfileNotValidException ex)
+            {
+                result.IsError = true;
+                ex.ValidationErrors.ForEach(e =>
+                {
+                    var error = new Error
+                    {
+                        Code = ErrorCode.ValidationError,
+                        Message = $"{ex.Message}"
+                    };
+
+                    result.Errors.Add(error);
+                });
+            }
+            catch (Exception ex)
+            {
+                var error = new Error
+                {
+                    Code = ErrorCode.UnknownError,
+                    Message = $"{ex.Message}"
+                };
+                result.Errors.Add(error);
+                result.IsError = true;                
+            }
+
+            return result;
         }
     }
 }

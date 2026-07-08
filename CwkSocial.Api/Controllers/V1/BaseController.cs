@@ -1,5 +1,4 @@
-﻿using Azure;
-using CwkSocial.Api.Contracts.Common;
+﻿using CwkSocial.Api.Contracts.Common;
 using CwkSocial.Application.Enums;
 using CwkSocial.Application.Models;
 using Microsoft.AspNetCore.Mvc;
