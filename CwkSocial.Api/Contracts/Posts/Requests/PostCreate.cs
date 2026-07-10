@@ -5,7 +5,7 @@ namespace CwkSocial.Api.Contracts.Posts.Requests
     public class PostCreate
     {
         [Required]
-        public Guid UserProfileId { get; set; }
+        public string UserProfileId { get; set; }
         [Required]
         [StringLength(1000)]
         public string TextContent { get; set; }

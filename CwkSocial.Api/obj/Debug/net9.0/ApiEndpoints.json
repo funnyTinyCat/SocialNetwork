@@ -1,6 +1,32 @@
 [
   {
     "ContainingType": "CwkSocial.Api.Controllers.V1.PostsController",
+    "Method": "GetAllPosts",
+    "RelativePath": "api/v1/Posts",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "CwkSocial.Api.Controllers.V1.PostsController",
+    "Method": "CreatePost",
+    "RelativePath": "api/v1/Posts",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "post",
+        "Type": "CwkSocial.Api.Contracts.Posts.Requests.PostCreate",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "CwkSocial.Api.Controllers.V1.PostsController",
     "Method": "GetById",
     "RelativePath": "api/v1/Posts/{id}",
     "HttpMethod": "GET",
@@ -9,7 +35,81 @@
     "Parameters": [
       {
         "Name": "id",
-        "Type": "System.Guid",
+        "Type": "System.String",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "CwkSocial.Api.Controllers.V1.PostsController",
+    "Method": "UpdatePost",
+    "RelativePath": "api/v1/Posts/{id}",
+    "HttpMethod": "PATCH",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.String",
+        "IsRequired": true
+      },
+      {
+        "Name": "post",
+        "Type": "CwkSocial.Api.Contracts.Posts.Requests.PostUpdate",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "CwkSocial.Api.Controllers.V1.PostsController",
+    "Method": "DeletePost",
+    "RelativePath": "api/v1/Posts/{id}",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.String",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "CwkSocial.Api.Controllers.V1.PostsController",
+    "Method": "GetCommentsByPostId",
+    "RelativePath": "api/v1/Posts/{postId}/comments",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "postId",
+        "Type": "System.String",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "CwkSocial.Api.Controllers.V1.PostsController",
+    "Method": "AddCommentToPost",
+    "RelativePath": "api/v1/Posts/{postId}/comments",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "postId",
+        "Type": "System.String",
+        "IsRequired": true
+      },
+      {
+        "Name": "comment",
+        "Type": "CwkSocial.Api.Contracts.Posts.Requests.PostCommentCreate",
         "IsRequired": true
       }
     ],

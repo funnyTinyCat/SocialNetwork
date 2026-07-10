@@ -2,19 +2,22 @@
 
 namespace CwkSocial.Api
 {
-    public class ApiRoutes
+    public static class ApiRoutes
     {
         public const string baseRoute = "api/v{version:apiVersion}/[controller]";
 
-        public class UserProfiles
+        public static class UserProfiles
         {
             public const string idRoute = "{id}";
         }
 
-        public class Posts
+        public static class Posts
         {
             public const string idRoute = "{id}";
+            public const string postComments = "{postId}/comments";
+            public const string commentById = "{postId}/comments/{commentId}";
         }
+
 
 
     }

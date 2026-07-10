@@ -1,7 +1,10 @@
-﻿namespace CwkSocial.Api.Contracts.Posts.Requests
+﻿using System.ComponentModel.DataAnnotations;
+
+namespace CwkSocial.Api.Contracts.Posts.Requests
 {
     public class PostUpdate
     {
-
+        [Required]
+        public string Text { get; set; }
     }
 }
