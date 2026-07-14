@@ -18,7 +18,11 @@ namespace CwkSocial.Api
             public const string commentById = "{postId}/comments/{commentId}";
         }
 
-
+        public static class Identity
+        {
+            public const string Login = "login";
+            public const string Registration = "registration";
+        }
 
     }
 }

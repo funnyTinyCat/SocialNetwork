@@ -1,5 +1,37 @@
 [
   {
+    "ContainingType": "CwkSocial.Api.Controllers.V1.IdentityController",
+    "Method": "Login",
+    "RelativePath": "api/v1/Identity/login",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "login",
+        "Type": "CwkSocial.Api.Contracts.Identity.Login",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "CwkSocial.Api.Controllers.V1.IdentityController",
+    "Method": "Register",
+    "RelativePath": "api/v1/Identity/registration",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "registration",
+        "Type": "CwkSocial.Api.Contracts.Identity.UserRegistration",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
     "ContainingType": "CwkSocial.Api.Controllers.V1.PostsController",
     "Method": "GetAllPosts",
     "RelativePath": "api/v1/Posts",

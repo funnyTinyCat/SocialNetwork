@@ -10,12 +10,14 @@ using CwkSocial.Application.UserProfiles.Queries;
 using CwkSocial.Application.Enums;
 using CwkSocial.Api.Contracts.Common;
 using CwkSocial.Api.Filters;
+using Microsoft.AspNetCore.Authorization;
 
 namespace CwkSocial.Api.Controllers.V1
 {
     [ApiVersion("1.0")]
     [Route(ApiRoutes.baseRoute)]
     [ApiController]
+    [Authorize]
     public class UserProfilesController : BaseController
     {
         private readonly IMediator _mediator;

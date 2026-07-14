@@ -171,3 +171,4 @@ C:\Users\macak\projects\CwkSocial.Api\CwkSocial.Api\bin\Debug\net9.0\System.Diag
 C:\Users\macak\projects\CwkSocial.Api\CwkSocial.Api\bin\Debug\net9.0\CwkSocial.Application.dll
 C:\Users\macak\projects\CwkSocial.Api\CwkSocial.Api\bin\Debug\net9.0\CwkSocial.Application.pdb
 C:\Users\macak\projects\CwkSocial.Api\CwkSocial.Api\bin\Debug\net9.0\FluentValidation.dll
+C:\Users\macak\projects\CwkSocial.Api\CwkSocial.Api\bin\Debug\net9.0\Microsoft.AspNetCore.Authentication.JwtBearer.dll

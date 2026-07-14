@@ -10,9 +10,17 @@ namespace CwkSocial.Application.Enums
     {
         NotFound = 404,
         ServerError = 500,
-        ValidationError = 101,
-        UnknownError = 999
 
+        // validation errors should be in the range 100 - 199
+        ValidationError = 101,
+
+        // infrastructure errors should be in the range 200 - 299
+        IdentityUserAlreadyExists = 201,
+        IdentityCreationFailed = 202,
+        IdentityUserDoesNotExist = 203,
+        IncorrectPassword = 204,
+
+        UnknownError = 999
 
     }
 }
