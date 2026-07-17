@@ -1,6 +1,22 @@
 [
   {
     "ContainingType": "CwkSocial.Api.Controllers.V1.IdentityController",
+    "Method": "CreateUserProfile",
+    "RelativePath": "api/v1/Identity",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "profile",
+        "Type": "CwkSocial.Api.Contracts.UserProfiles.Requests.UserProfileCreateUpdate",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "CwkSocial.Api.Controllers.V1.IdentityController",
     "Method": "Login",
     "RelativePath": "api/v1/Identity/login",
     "HttpMethod": "POST",
@@ -155,22 +171,6 @@
     "IsController": true,
     "Order": 0,
     "Parameters": [],
-    "ReturnTypes": []
-  },
-  {
-    "ContainingType": "CwkSocial.Api.Controllers.V1.UserProfilesController",
-    "Method": "CreateUserProfile",
-    "RelativePath": "api/v1/UserProfiles",
-    "HttpMethod": "POST",
-    "IsController": true,
-    "Order": 0,
-    "Parameters": [
-      {
-        "Name": "profile",
-        "Type": "CwkSocial.Api.Contracts.UserProfiles.Requests.UserProfileCreateUpdate",
-        "IsRequired": true
-      }
-    ],
     "ReturnTypes": []
   },
   {

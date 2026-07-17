@@ -3,11 +3,11 @@ using Cwk.Domain.Aggregates.UserProfileAggregate;
 using CwkSocial.Application.UserProfiles.Commands;
 namespace CwkSocial.Application.MappingProfiles
 {
-    internal class UserProfileMap : Profile
+    internal class UserProfileMap_bck : Profile
     {
-        public UserProfileMap()
+        public UserProfileMap_bck()
         {
-            CreateMap<CreateUserCommand, BasicInfo>();
+            CreateMap<CreateUserCommand_bck, BasicInfo>();
             //CreateMap<UserProfile, UserProfileResponse>();
         }
     }

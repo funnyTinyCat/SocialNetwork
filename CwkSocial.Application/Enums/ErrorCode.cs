@@ -19,6 +19,11 @@ namespace CwkSocial.Application.Enums
         IdentityCreationFailed = 202,
         IdentityUserDoesNotExist = 203,
         IncorrectPassword = 204,
+        InexistentUserProfile = 205,
+
+        // application errors sould be in the range 300 - 399
+        PostUpdateNotPossible = 300,
+        PostDeleteNotPossible = 301,
 
         UnknownError = 999
 

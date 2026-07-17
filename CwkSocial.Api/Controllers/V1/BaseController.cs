@@ -24,12 +24,13 @@ namespace CwkSocial.Api.Controllers.V1
             }
            
             //var error = errors.First(e => e.Code == ErrorCode.ServerError);
-            apiError.StatusCode = 500;
-            apiError.StatusPhrase = "Internal Server Error";
+            apiError.StatusCode = 400;
+            apiError.StatusPhrase = "Bad Request";
             apiError.Timestamp = DateTime.Now;
-            apiError.Errors.Add("Unknown error.");
+            //apiError.Errors.Add("Unknown error.");
+            errors.ForEach(e => apiError.Errors.Add($"{e.Message}")); 
 
-            return StatusCode(500, apiError); 
+            return StatusCode(400, apiError); 
         }
     }
 }

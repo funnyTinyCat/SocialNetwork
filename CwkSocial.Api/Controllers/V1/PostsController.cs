@@ -9,9 +9,13 @@ using CwkSocial.Api.Contracts.Posts.Requests;
 using CwkSocial.Application.Posts.Commands;
 using CwkSocial.Api.Contracts.Common;
 using CwkSocial.Application.Enums;
+using Microsoft.AspNetCore.Authorization;
+using System.Security.Claims;
+using CwkSocial.Api.Extensions;
 
 namespace CwkSocial.Api.Controllers.V1
 {
+    [Authorize]
     [ApiVersion("1.0")]
     [Route(ApiRoutes.baseRoute)]
     [ApiController]
@@ -62,7 +66,13 @@ namespace CwkSocial.Api.Controllers.V1
         [HttpPost]
         public async Task<IActionResult> CreatePost([FromBody] PostCreate post)
         {
-            var command = new CreatePost() { UserProfileId = Guid.Parse(post.UserProfileId), TextContent = post.TextContent };
+            var userProfileId = HttpContext.GetUserProfileIdClaimValue();
+
+            var command = new CreatePost() 
+            { 
+                UserProfileId = userProfileId,
+                TextContent = post.TextContent 
+            };
 
             var result = await _mediator.Send(command);
             var mapped = _mapper.Map<PostResponse>(result.Payload);
@@ -77,7 +87,13 @@ namespace CwkSocial.Api.Controllers.V1
         [HttpPatch(ApiRoutes.Posts.idRoute)]
         public async Task<IActionResult> UpdatePost([FromRoute] string id, [FromBody] PostUpdate post)
         {
-            var command = new UpdatePost() { PostId = Guid.Parse(id), Text = post.Text };
+            var userProfileId = HttpContext.GetUserProfileIdClaimValue();
+
+            var command = new UpdatePost() { 
+                PostId = Guid.Parse(id), 
+                Text = post.Text,
+                UserProfileId = userProfileId
+            };
 
             var result = await _mediator.Send(command);
 
@@ -95,7 +111,13 @@ namespace CwkSocial.Api.Controllers.V1
         [HttpDelete(ApiRoutes.Posts.idRoute)]
         public async Task<IActionResult> DeletePost(string id)
         {
-            var command = new DeletePost() { PostId = Guid.Parse(id) };
+            var userProfileId = HttpContext.GetUserProfileIdClaimValue();
+
+            var command = new DeletePost() 
+            { 
+                PostId = Guid.Parse(id),
+                UserProfileId = userProfileId
+            };
 
             var result = await _mediator.Send(command);
 

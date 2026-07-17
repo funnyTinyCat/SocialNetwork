@@ -13,6 +13,7 @@ using System.Diagnostics;
 using System.Text;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.Extensions.DependencyInjection;
+using CwkSocial.Application.Services;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -93,6 +94,8 @@ builder.Services.AddAuthentication(JwtBearerDefaults.AuthenticationScheme)
         };
         options.ClaimsIssuer = "CwkSocial";
     });
+
+builder.Services.AddScoped<IdentityService>();
                 
 builder.Services.AddOpenApi();
 

@@ -1,23 +1,27 @@
-﻿using Cwk.Domain.Aggregates.UserProfileAggregate;
+﻿using Azure.Core;
+using Cwk.Domain.Aggregates.UserProfileAggregate;
 using Cwk.Domain.Exceptions;
 using CwkSocial.Application.Enums;
 using CwkSocial.Application.Identity.Commands;
 using CwkSocial.Application.Models;
 using CwkSocial.Application.Options;
+using CwkSocial.Application.Services;
 using CwkSocial.Dal;
 using MediatR;
 using Microsoft.AspNetCore.Identity;
+using Microsoft.EntityFrameworkCore.Storage;
+using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.Options;
 using Microsoft.IdentityModel.Tokens;
 using System;
 using System.Collections.Generic;
 using System.IdentityModel.Tokens.Jwt;
 using System.Linq;
+using System.Security.Claims;
+using System.Security.Principal;
 using System.Text;
 using System.Threading.Tasks;
 using System.Transactions;
-using System.Security.Claims;
-using Microsoft.Extensions.Configuration;
 
 namespace CwkSocial.Application.Identity.CommandHandlers
 {  
@@ -25,16 +29,14 @@ namespace CwkSocial.Application.Identity.CommandHandlers
     {
         private readonly DataContext _context;
         private readonly UserManager<IdentityUser> _userManager;
-        private readonly JwtSettings _jwtSettings;
-        private readonly IConfiguration _config;
+        private readonly IdentityService _identityService;
 
-        public RegisterIdentityHandler(DataContext context, UserManager<IdentityUser> userManager,
-            IOptions<JwtSettings> jwtSettings, IConfiguration config)
+        public RegisterIdentityHandler(DataContext context, UserManager<IdentityUser> userManager, 
+            IdentityService identityService)
         {
             _context = context;
             _userManager = userManager;
-            _jwtSettings = jwtSettings.Value;
-            _config = config;
+            _identityService = identityService;
         }
         public async Task<OperationResult<string>> Handle(RegisterIdentity request, CancellationToken cancellationToken)
         {
@@ -42,98 +44,24 @@ namespace CwkSocial.Application.Identity.CommandHandlers
 
             try
             {
-                var existingIdentity = await _userManager.FindByEmailAsync(request.Username);
+                var creationValidated = await ValidateIdentityDoesNotExist(result, request);
 
-                if (existingIdentity != null)
+                if (!creationValidated) return result;
+
+                using var transaction = await _context.Database.BeginTransactionAsync();
+
+                var identity = await CreateIdentityUserAsync(result, request, transaction);
+
+                if (identity is null)
                 {
-                    result.IsError = true;
-                    var error = new Error
-                    {
-                        Code = ErrorCode.IdentityUserAlreadyExists,
-                        Message = $"There is already user with username {request.Username}"
-                    };
-
-                    result.Errors.Add(error);
-
-                    return result;  
-                }
-
-                var identity = new IdentityUser
-                {
-                    UserName = request.Username,
-                    Email = request.Username,
-                };
-
-                using var transaction = _context.Database.BeginTransaction();
-
-                var createdIdentity = await _userManager.CreateAsync(identity, request.Password);
-
-                if (!createdIdentity.Succeeded)
-                {
-                    await transaction.RollbackAsync();
-
-                    result.IsError = true;
-
-                    foreach (var identityError in createdIdentity.Errors)
-                    {
-                        var error = new Error
-                        {
-                            Code = ErrorCode.IdentityCreationFailed,
-                            Message = $"{identityError.Description}"
-                        };
-                        result.Errors.Add(error);
-                    }
-
                     return result;
                 }
 
-                var profileInfo = BasicInfo.CreateBasicInfo(request.FirstName, request.LastName, request.Username,
-                    request.Phone, request.DateOfBirth, request.CurrentCity);
+                var profile = await CreateUserProfileAsync(result, request, transaction, identity);
 
-                var profile = UserProfile.CreateUserProfile(identity.Id, profileInfo);
+                await transaction.CommitAsync();
 
-
-
-                try
-                {
-
-                    _context.UserProfiles.Add(profile);
-
-
-                    await _context.SaveChangesAsync();
-
-                    await transaction.CommitAsync();
-
-                }
-                catch (Exception ex)
-                {
-                    await transaction.RollbackAsync();
-                }
-
-                var tokenHandler = new JwtSecurityTokenHandler();
-
-                var key = Encoding.ASCII.GetBytes(_config["JwtSettings:SigningKey"]!);
-
-                var tokenDescriptor = new SecurityTokenDescriptor()
-                {
-                    Subject = new ClaimsIdentity(new Claim[]
-                    {
-                        new Claim(JwtRegisteredClaimNames.Sub, identity.Email),
-                        new Claim(JwtRegisteredClaimNames.Jti, Guid.NewGuid().ToString()),
-                        new Claim(JwtRegisteredClaimNames.Email, identity.Email),
-                        new Claim("IdentityId", identity.Id),
-                        new Claim("UserProfileId", profile.UserProfileId.ToString()),
-                    }),
-                    Expires = DateTime.UtcNow.AddHours(2),
-                    Audience = _config["JwtSettings:Audience"],
-                    Issuer = _config["JwtSettings:Issuer"],
-                    SigningCredentials = new SigningCredentials(
-                        new SymmetricSecurityKey(key), SecurityAlgorithms.HmacSha256Signature)
-                };
-
-                var token = tokenHandler.CreateToken(tokenDescriptor);
-
-                result.Payload = tokenHandler.WriteToken(token);
+                result.Payload = GetJwtString(identity, profile); 
 
                 return result;
             }
@@ -165,6 +93,103 @@ namespace CwkSocial.Application.Identity.CommandHandlers
 
             return result;
         }
-    }
 
+
+        private async Task<bool> ValidateIdentityDoesNotExist(OperationResult<string> result, RegisterIdentity request)
+        {
+            var existingIdentity = await _userManager.FindByEmailAsync(request.Username);
+
+            if (existingIdentity != null)
+            {
+                result.IsError = true;
+                var error = new Error
+                {
+                    Code = ErrorCode.IdentityUserAlreadyExists,
+                    Message = $"There is already user with username {request.Username}"
+                };
+
+                result.Errors.Add(error);
+
+                return false;
+            }
+
+            return true;    
+        } 
+        
+
+        private async Task<IdentityUser> CreateIdentityUserAsync(OperationResult<string> result, RegisterIdentity request,
+            IDbContextTransaction transaction)
+        {
+            var identity = new IdentityUser
+            {
+                Email = request.Username,
+                UserName = request.Username
+            };
+
+            var createdIdentity = await _userManager.CreateAsync(identity, request.Password);
+
+            if (!createdIdentity.Succeeded)
+            {
+                await transaction.RollbackAsync();
+
+                result.IsError = true;
+
+                foreach (var identityError in createdIdentity.Errors)
+                {
+                    var error = new Error
+                    {
+                        Code = ErrorCode.IdentityCreationFailed,
+                        Message = $"{identityError.Description}"
+                    };
+                    result.Errors.Add(error);
+                }
+
+                return null;
+            }
+
+            return identity;
+        }
+
+
+        private async Task<UserProfile> CreateUserProfileAsync(OperationResult<string> result, 
+            RegisterIdentity request, IDbContextTransaction transaction, IdentityUser identity)
+        {
+
+            try
+            {
+                var profileInfo = BasicInfo.CreateBasicInfo(request.FirstName, request.LastName, request.Username,
+                    request.Phone, request.DateOfBirth, request.CurrentCity);
+
+                var profile = UserProfile.CreateUserProfile(identity.Id, profileInfo);
+
+
+                _context.UserProfiles.Add(profile);
+                 await _context.SaveChangesAsync();
+
+                return profile;
+            }
+            catch (Exception ex)
+            {
+                await transaction.RollbackAsync();
+                throw;
+            }
+
+        }
+
+        private string GetJwtString(IdentityUser identity, UserProfile profile)
+        {
+            var claimsIdentity = new ClaimsIdentity(new Claim[]
+            {
+                new Claim (JwtRegisteredClaimNames.Sub, identity.Email!),
+                new Claim(JwtRegisteredClaimNames.Jti, Guid.NewGuid().ToString()),
+                new Claim(JwtRegisteredClaimNames.Email, identity.Email!),
+                new Claim("IdentityId", identity.Id),
+                new Claim("UserProfileId", profile.UserProfileId.ToString())
+            });
+
+            var token = _identityService.CreateSecurityToken(claimsIdentity);
+
+            return _identityService.WriteToken(token);
+        }
+    }
 }

@@ -11,6 +11,7 @@ namespace CwkSocial.Application.Posts.Commands
 {
     public class DeletePost : IRequest<OperationResult<Post>>
     {
+        public Guid UserProfileId { get; set; }
         public Guid PostId { get; set; }
     }
 }

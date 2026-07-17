@@ -9,7 +9,7 @@ using System.Threading.Tasks;
 
 namespace CwkSocial.Application.UserProfiles.Commands
 {
-    public class CreateUserCommand : IRequest<OperationResult<UserProfile>>
+    public class CreateUserCommand_bck : IRequest<OperationResult<UserProfile>>
     {
         public string FirstName { get; set; }
         public string LastName { get; set; }

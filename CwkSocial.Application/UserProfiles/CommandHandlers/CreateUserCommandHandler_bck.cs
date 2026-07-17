@@ -14,15 +14,15 @@ using System.Threading.Tasks;
 
 namespace CwkSocial.Application.UserProfiles.CommandHandlers
 {
-    public class CreateUserCommandHandler : IRequestHandler<CreateUserCommand, OperationResult<UserProfile>>
+    public class CreateUserCommandHandler_bck : IRequestHandler<CreateUserCommand_bck, OperationResult<UserProfile>>
     {
         private readonly DataContext _context;
 
-        public CreateUserCommandHandler(DataContext context)
+        public CreateUserCommandHandler_bck(DataContext context)
         {
             _context = context;
         }
-        public async Task<OperationResult<UserProfile>> Handle(CreateUserCommand request, CancellationToken cancellationToken)
+        public async Task<OperationResult<UserProfile>> Handle(CreateUserCommand_bck request, CancellationToken cancellationToken)
         {
             var result = new OperationResult<UserProfile>();
 

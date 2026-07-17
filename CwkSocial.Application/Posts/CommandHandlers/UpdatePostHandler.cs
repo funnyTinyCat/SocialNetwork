@@ -45,6 +45,22 @@ namespace CwkSocial.Application.Posts.CommandHandlers
                     return result;
                 }
 
+                if (post.UserProfileId != request.UserProfileId)
+                {
+                    result.IsError = true;
+
+                    var error = new Error
+                    {
+                        Code = ErrorCode.PostUpdateNotPossible,
+                        Message = $"Post update not possible because it's not the post owner that " +
+                            " initiates the update "
+                    };
+
+                    result.Errors.Add(error);
+
+                    return result;
+                }
+
                 post.UpdatePostText(request.Text);
                 await _context.SaveChangesAsync();
 

@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("Cwk.Domain")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+0af25000175cfaabaf0e88dc7218f60b4f65716c")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+05a3ee2ca8e4f1c3ab90571e74dc98991841fa91")]
 [assembly: System.Reflection.AssemblyProductAttribute("Cwk.Domain")]
 [assembly: System.Reflection.AssemblyTitleAttribute("Cwk.Domain")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

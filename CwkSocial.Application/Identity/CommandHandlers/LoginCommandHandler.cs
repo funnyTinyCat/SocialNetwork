@@ -1,7 +1,9 @@
 ﻿using AutoMapper;
+using Cwk.Domain.Aggregates.UserProfileAggregate;
 using CwkSocial.Application.Enums;
 using CwkSocial.Application.Identity.Commands;
 using CwkSocial.Application.Models;
+using CwkSocial.Application.Services;
 using CwkSocial.Dal;
 using MediatR;
 using Microsoft.AspNetCore.Identity;
@@ -13,6 +15,7 @@ using System.Collections.Generic;
 using System.IdentityModel.Tokens.Jwt;
 using System.Linq;
 using System.Security.Claims;
+using System.Security.Principal;
 using System.Text;
 using System.Threading.Tasks;
 
@@ -22,14 +25,14 @@ namespace CwkSocial.Application.Identity.CommandHandlers
     {
         private readonly DataContext _context;
         private readonly UserManager<IdentityUser> _userManager;
-        private readonly IConfiguration _config;
+        private readonly IdentityService _identityService;
 
         public LoginCommandHandler(DataContext context, UserManager<IdentityUser> userManager,
-            IConfiguration config)
+            IdentityService identityService)
         {
             _context = context;
             _userManager = userManager;
-            _config = config;
+            _identityService = identityService; 
         }
         public async Task<OperationResult<string>> Handle(LoginCommand request, CancellationToken cancellationToken)
         {
@@ -37,59 +40,30 @@ namespace CwkSocial.Application.Identity.CommandHandlers
 
             try
             {
-                var identity = await _userManager.FindByEmailAsync(request.Username);
+                var identityUser = await ValidateAndGetIdentityAsync(request, result);
 
-                if (identity == null)
+                if (identityUser == null)
                 {
-                    result.IsError = true;
-                    var error = new Error
-                    {
-                        Code = ErrorCode.IdentityUserDoesNotExist,
-                        Message = $"Unable to find the user with the specified username."
-                    };
-                    result.Errors.Add(error);
-
                     return result;
                 }
 
-                var validPassword = await _userManager.CheckPasswordAsync(identity, request.Password);
+                var userProfile = await _context.UserProfiles.FirstOrDefaultAsync(up => 
+                    up.IdentityId == identityUser.Id);
 
-                if (!validPassword)
-                {
-                    result.IsError = true;
-                    var error = new Error
-                    {
-                        Code = ErrorCode.IncorrectPassword,
-                        Message = $"Provided password is not valid. Login failed."
-                    };
-                    result.Errors.Add(error);
+                //if (userProfile == null)
+                //{
+                //    result.IsError = true;
+                //    var error = new Error
+                //    {
+                //        Code = ErrorCode.InexistentUserProfile,
+                //        Message = $"Unable to find a user with a specified username."
+                //    };
+                //    result.Errors.Add(error);
 
-                    return result;
-                }
+                //    return result;
+                //}
 
-                var userProfile = await _context.UserProfiles.FirstOrDefaultAsync(up => up.IdentityId == identity.Id);
-
-                var tokenHandler = new JwtSecurityTokenHandler();
-                var key = Encoding.ASCII.GetBytes(_config["JwtSettings:SigningKey"]!);
-                var tokenDescriptor = new SecurityTokenDescriptor()
-                {
-                    Subject = new ClaimsIdentity(new Claim[]
-                    {
-                        new Claim(JwtRegisteredClaimNames.Sub, identity.Email!),
-                        new Claim(JwtRegisteredClaimNames.Jti, Guid.NewGuid().ToString()),
-                        new Claim(JwtRegisteredClaimNames.Email, identity.Email!),
-                        new Claim("IdentityId", identity.Id),
-                        new Claim("UserProfileId", userProfile.UserProfileId.ToString())
-                    }),
-                    Expires = DateTime.Now.AddHours(2),
-                    Audience = _config["JwtSettings:Audience"],
-                    Issuer = _config["JwtSettings:Issuer"],
-                    SigningCredentials = new SigningCredentials(new SymmetricSecurityKey(key),
-                        SecurityAlgorithms.HmacSha256Signature)
-                };
-
-                var token = tokenHandler.CreateToken(tokenDescriptor);
-                result.Payload = tokenHandler.WriteToken(token);
+                result.Payload = GetJwtString(identityUser, userProfile);
 
                 return result;  
             }
@@ -105,6 +79,60 @@ namespace CwkSocial.Application.Identity.CommandHandlers
             }
 
             return result;
+        }
+
+        private async Task<IdentityUser> ValidateAndGetIdentityAsync(LoginCommand request, 
+            OperationResult<string> result)
+        {
+            var identity = await _userManager.FindByEmailAsync(request.Username);
+
+            if (identity == null)
+            {
+                result.IsError = true;
+                var error = new Error
+                {
+                    Code = ErrorCode.IdentityUserDoesNotExist,
+                    Message = $"Unable to find the user with the specified username."
+                };
+                result.Errors.Add(error);
+
+                return null;
+            }
+
+            var validPassword = await _userManager.CheckPasswordAsync(identity, request.Password);
+
+            if (!validPassword)
+            {
+                result.IsError = true;
+                var error = new Error
+                {
+                    Code = ErrorCode.IncorrectPassword,
+                    Message = $"Provided password is not valid. Login failed."
+                };
+                result.Errors.Add(error);
+
+                return null;
+            }
+
+            return identity;
+        }
+
+
+        private string GetJwtString(IdentityUser identity, UserProfile profile)
+        {
+            var claimsIdentity = new ClaimsIdentity(new Claim[]
+                {
+                    new Claim (JwtRegisteredClaimNames.Sub, identity.Email!),
+                    new Claim(JwtRegisteredClaimNames.Jti, Guid.NewGuid().ToString()),
+                    new Claim(JwtRegisteredClaimNames.Email, identity.Email!),
+                    new Claim("IdentityId", identity.Id),
+                    new Claim("UserProfileId", profile.UserProfileId.ToString())
+
+                });
+
+            var token = _identityService.CreateSecurityToken(claimsIdentity);
+
+            return _identityService.WriteToken(token);
         }
     }
 }

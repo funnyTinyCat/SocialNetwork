@@ -42,18 +42,7 @@ namespace CwkSocial.Api.Controllers.V1
             return Ok(profiles);
         }
 
-        [ValidateModel]
-        [HttpPost]
-        public async Task<IActionResult> CreateUserProfile([FromBody] UserProfileCreateUpdate profile)
-        {
-            var command = _mapper.Map<CreateUserCommand>(profile);
-
-            var response = await _mediator.Send(command);
-
-            var userProfile = _mapper.Map<UserProfileResponse>(response.Payload);
-
-            return CreatedAtAction(nameof(GetUserProfileById), new {id = userProfile.UserProfileId }, userProfile);
-        }
+     
 
         [ValidateGuid("id")]
         [HttpGet(ApiRoutes.UserProfiles.idRoute)]
