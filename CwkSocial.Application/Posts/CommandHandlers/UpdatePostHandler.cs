@@ -32,64 +32,33 @@ namespace CwkSocial.Application.Posts.CommandHandlers
 
                 if (post == null)
                 {
-                    result.IsError = true;
-
-                    var error = new Error
-                    {
-                        Code = ErrorCode.NotFound,
-                        Message = $"No post found with ID {request.PostId}"
-                    };
-
-                    result.Errors.Add(error);
+                    result.AddError(ErrorCode.NotFound, string.Format(PostsErrorMessages.PostNotFound, request.PostId));
 
                     return result;
                 }
 
                 if (post.UserProfileId != request.UserProfileId)
                 {
-                    result.IsError = true;
-
-                    var error = new Error
-                    {
-                        Code = ErrorCode.PostUpdateNotPossible,
-                        Message = $"Post update not possible because it's not the post owner that " +
-                            " initiates the update "
-                    };
-
-                    result.Errors.Add(error);
+                    result.AddError(ErrorCode.PostUpdateNotPossible, PostsErrorMessages.PostUpdateNotPossible);
 
                     return result;
                 }
 
                 post.UpdatePostText(request.Text);
-                await _context.SaveChangesAsync();
+                await _context.SaveChangesAsync(cancellationToken);
 
                 result.Payload = post;
             }
             catch (PostNotValidException e)
             {
-                result.IsError = true;
-
                 e.ValidationErrors.ForEach(er =>
                 {
-                    var error = new Error
-                    {
-                        Code = ErrorCode.NotFound,
-                        Message = $"{e.Message}"
-                    };
-
-                    result.Errors.Add(error);
+                    result.AddError(ErrorCode.ValidationError, er);                
                 });
             }
             catch (Exception ex)
             {
-                var error = new Error
-                {
-                    Code = ErrorCode.UnknownError,
-                    Message = ex.Message
-                };
-                result.IsError = true;
-                result.Errors.Add(error);
+                result.AddUnknownError(ex.Message);
             }
 
             return result;

@@ -32,30 +32,14 @@ namespace CwkSocial.Application.Posts.CommandHandlers
 
                 if (post == null)
                 {
-                    result.IsError = true;
-
-                    var error = new Error
-                    {
-                        Code = ErrorCode.NotFound,
-                        Message = $"Not found post with ID {request.PostId}"
-                    };
-
-                    result.Errors.Add(error);
+                    result.AddError(ErrorCode.NotFound, string.Format(PostsErrorMessages.PostNotFound, request.PostId));                
 
                     return result;
                 }
 
                 if (post.UserProfileId != request.UserProfileId)
                 {
-                    result.IsError = true;
-
-                    var error = new Error
-                    {
-                        Code = ErrorCode.PostDeleteNotPossible,
-                        Message = $"Only the owner of the post can delete it"
-                    };
-
-                    result.Errors.Add(error);
+                    result.AddError(ErrorCode.PostDeleteNotPossible, PostsErrorMessages.PostDeleteNotPossible);
 
                     return result;
                 }
@@ -63,35 +47,20 @@ namespace CwkSocial.Application.Posts.CommandHandlers
                 result.Payload = post;
 
                 _context.Remove(post);
-                await _context.SaveChangesAsync();
+                await _context.SaveChangesAsync(cancellationToken);
 
             }
             catch (PostNotValidException ex)
             {
-                result.IsError = true;
-
+                
                 ex.ValidationErrors.ForEach(er =>
                 {
-                    var error = new Error
-                    {
-                        Code = ErrorCode.ValidationError,
-                        Message = $"{ex.Message}"
-                    };
-
-                    result.Errors.Add(error);
+                    result.AddError(ErrorCode.ValidationError, er);
                 });
             }
             catch (Exception ex)
             {
-                result.IsError = true;
-
-                var error = new Error
-                {
-                    Code = ErrorCode.UnknownError,
-                    Message = $"{ex.Message}"
-                };
-
-                result.Errors.Add(error);
+                result.AddUnknownError(ex.Message);
             }
 
             return result;

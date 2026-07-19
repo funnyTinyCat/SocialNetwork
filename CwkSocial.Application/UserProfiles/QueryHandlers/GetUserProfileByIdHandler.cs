@@ -1,4 +1,5 @@
 ﻿using Cwk.Domain.Aggregates.UserProfileAggregate;
+using CwkSocial.Application.Enums;
 using CwkSocial.Application.Models;
 using CwkSocial.Application.UserProfiles.Queries;
 using CwkSocial.Dal;
@@ -30,13 +31,8 @@ namespace CwkSocial.Application.UserProfiles.QueryHandlers
 
             if (userProfile == null)
             {
-                result.IsError = true;
-                var error = new Error
-                {
-                    Code = Enums.ErrorCode.NotFound,
-                    Message = $"User Profile with ID {request.UserProfileId} is not found."
-                };
-                result.Errors.Add(error);
+                result.AddError(ErrorCode.NotFound, 
+                    string.Format(UserProfilesErrorMessages.UserProfileNotFound, request.UserProfileId));                 
 
                 return result;
             }

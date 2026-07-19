@@ -28,19 +28,12 @@ namespace CwkSocial.Application.Posts.CommandHandlers
 
             try
             {
-                var post = await _context.Posts.FirstOrDefaultAsync(p => p.PostId == request.PostId);
+                var post = await _context.Posts.FirstOrDefaultAsync(p => p.PostId == request.PostId, 
+                    cancellationToken);
 
                 if (post == null)
                 {
-                    result.IsError = true;
-
-                    var error = new Error
-                    {
-                        Code = ErrorCode.NotFound,
-                        Message = $"Post with ID {request.PostId} has not been found."
-                    };
-
-                    result.Errors.Add(error);
+                    result.AddError(ErrorCode.NotFound, string.Format(PostsErrorMessages.PostNotFound, request.PostId));             
 
                     return result; 
                 }
@@ -51,35 +44,20 @@ namespace CwkSocial.Application.Posts.CommandHandlers
 
                 _context.Posts.Update(post);
 
-                await _context.SaveChangesAsync();
+                await _context.SaveChangesAsync(cancellationToken);
 
                 result.Payload = comment;
             }
             catch (PostCommentNotValidException ex)
-            {
-                result.IsError = true;
-
+            {               
                 ex.ValidationErrors.ForEach(er =>
                 {
-                    var error = new Error
-                    {
-                        Code = ErrorCode.ValidationError,
-                        Message = $"{ex.Message}"
-                    };
-
-                    result.Errors.Add(error);
+                    result.AddError(ErrorCode.ValidationError, er);
                 });
             }
             catch (Exception ex)
             {
-                var error = new Error
-                {
-                    Code = ErrorCode.UnknownError,
-                    Message = $"{ex.Message}"
-                };
-
-                result.IsError = true;
-                result.Errors.Add(error);
+               result.AddUnknownError(ex.Message);
             }
 
             return result;
