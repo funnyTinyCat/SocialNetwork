@@ -174,5 +174,55 @@ namespace CwkSocial.Api.Controllers.V1
 
             return Ok(mapped); 
         }
+
+        [HttpGet(ApiRoutes.Posts.PostInteractions)]
+        [ValidateGuid("postId")]
+        public async Task<IActionResult> GetPostInteractions(string postId, CancellationToken cancellationToken)
+        {
+            var postGuid = Guid.Parse(postId);
+            var query = new GetPostInteractions()
+            {
+                PostId = postGuid
+            };
+
+            var result = await _mediator.Send(query, cancellationToken);
+
+            if (result.IsError)
+            {
+                return HandleErrorResponse(result.Errors);
+            }
+
+            var mapped = _mapper.Map<List<Contracts.Posts.Responses.PostInteraction>>(result.Payload);
+
+            return Ok(mapped);
+        }
+
+        [HttpPost(ApiRoutes.Posts.PostInteractions)]
+        [ValidateGuid("postId")]
+        [ValidateModel]
+        public async Task<IActionResult> AddPostInteraction(string postId, PostInteractionCreate interaction,
+            CancellationToken cancellationToken)
+        {
+            var postGuid = Guid.Parse(postId);
+            var userProfileId = HttpContext.GetUserProfileIdClaimValue();
+
+            var command = new AddInteraction
+            {
+                PostId = postGuid,
+                UserProfileId = userProfileId,
+                Type = interaction.Type
+            };
+
+            var result = await _mediator.Send(command, cancellationToken);
+
+            if (result.IsError)
+            {
+                return HandleErrorResponse(result.Errors);
+            }
+
+            var mapped = _mapper.Map<Contracts.Posts.Responses.PostInteraction>(result.Payload);
+
+            return Ok(mapped);
+        }
     }
 }

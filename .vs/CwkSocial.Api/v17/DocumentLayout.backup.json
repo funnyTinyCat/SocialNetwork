@@ -3,68 +3,72 @@
   "WorkspaceRootPath": "C:\\Users\\macak\\projects\\CwkSocial.Api\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{08BA266E-09A3-42D6-AA5A-77B348B675E1}|CwkSocial.Application\\CwkSocial.Application.csproj|c:\\users\\macak\\projects\\cwksocial.api\\cwksocial.application\\userprofiles\\commandhandlers\\createusercommandhandler_bck.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{08BA266E-09A3-42D6-AA5A-77B348B675E1}|CwkSocial.Application\\CwkSocial.Application.csproj|solutionrelative:cwksocial.application\\userprofiles\\commandhandlers\\createusercommandhandler_bck.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{F0318393-66CA-4989-BFB6-93DBEB7BF14E}|CwkSocial.Api\\CwkSocial.Api.csproj|c:\\users\\macak\\projects\\cwksocial.api\\cwksocial.api\\mappingprofiles\\userprofilemappings.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F0318393-66CA-4989-BFB6-93DBEB7BF14E}|CwkSocial.Api\\CwkSocial.Api.csproj|solutionrelative:cwksocial.api\\mappingprofiles\\userprofilemappings.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{08BA266E-09A3-42D6-AA5A-77B348B675E1}|CwkSocial.Application\\CwkSocial.Application.csproj|c:\\users\\macak\\projects\\cwksocial.api\\cwksocial.application\\userprofiles\\queryhandlers\\getuserprofilebyidhandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{08BA266E-09A3-42D6-AA5A-77B348B675E1}|CwkSocial.Application\\CwkSocial.Application.csproj|solutionrelative:cwksocial.application\\userprofiles\\queryhandlers\\getuserprofilebyidhandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{F0318393-66CA-4989-BFB6-93DBEB7BF14E}|CwkSocial.Api\\CwkSocial.Api.csproj|c:\\users\\macak\\projects\\cwksocial.api\\cwksocial.api\\mappingprofiles\\postmappings.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F0318393-66CA-4989-BFB6-93DBEB7BF14E}|CwkSocial.Api\\CwkSocial.Api.csproj|solutionrelative:cwksocial.api\\mappingprofiles\\postmappings.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{08BA266E-09A3-42D6-AA5A-77B348B675E1}|CwkSocial.Application\\CwkSocial.Application.csproj|c:\\users\\macak\\projects\\cwksocial.api\\cwksocial.application\\userprofiles\\queryhandlers\\getalluserprofilesqueryhandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{08BA266E-09A3-42D6-AA5A-77B348B675E1}|CwkSocial.Application\\CwkSocial.Application.csproj|solutionrelative:cwksocial.application\\userprofiles\\queryhandlers\\getalluserprofilesqueryhandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{366C63A7-0661-4522-87AF-15B20D95D6D3}|Cwk.Domain\\Cwk.Domain.csproj|c:\\users\\macak\\projects\\cwksocial.api\\cwk.domain\\aggregates\\postaggregate\\postinteraction.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{366C63A7-0661-4522-87AF-15B20D95D6D3}|Cwk.Domain\\Cwk.Domain.csproj|solutionrelative:cwk.domain\\aggregates\\postaggregate\\postinteraction.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{08BA266E-09A3-42D6-AA5A-77B348B675E1}|CwkSocial.Application\\CwkSocial.Application.csproj|c:\\users\\macak\\projects\\cwksocial.api\\cwksocial.application\\userprofiles\\commandhandlers\\updateuserprofilebasicinfohandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{08BA266E-09A3-42D6-AA5A-77B348B675E1}|CwkSocial.Application\\CwkSocial.Application.csproj|solutionrelative:cwksocial.application\\userprofiles\\commandhandlers\\updateuserprofilebasicinfohandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{F0318393-66CA-4989-BFB6-93DBEB7BF14E}|CwkSocial.Api\\CwkSocial.Api.csproj|c:\\users\\macak\\projects\\cwksocial.api\\cwksocial.api\\contracts\\posts\\responses\\postinteraction.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F0318393-66CA-4989-BFB6-93DBEB7BF14E}|CwkSocial.Api\\CwkSocial.Api.csproj|solutionrelative:cwksocial.api\\contracts\\posts\\responses\\postinteraction.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{08BA266E-09A3-42D6-AA5A-77B348B675E1}|CwkSocial.Application\\CwkSocial.Application.csproj|c:\\users\\macak\\projects\\cwksocial.api\\cwksocial.application\\userprofiles\\commandhandlers\\deleteuserprofilehandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{08BA266E-09A3-42D6-AA5A-77B348B675E1}|CwkSocial.Application\\CwkSocial.Application.csproj|solutionrelative:cwksocial.application\\userprofiles\\commandhandlers\\deleteuserprofilehandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{F0318393-66CA-4989-BFB6-93DBEB7BF14E}|CwkSocial.Api\\CwkSocial.Api.csproj|c:\\users\\macak\\projects\\cwksocial.api\\cwksocial.api\\contracts\\posts\\responses\\interactionuser.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F0318393-66CA-4989-BFB6-93DBEB7BF14E}|CwkSocial.Api\\CwkSocial.Api.csproj|solutionrelative:cwksocial.api\\contracts\\posts\\responses\\interactionuser.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{08BA266E-09A3-42D6-AA5A-77B348B675E1}|CwkSocial.Application\\CwkSocial.Application.csproj|c:\\users\\macak\\projects\\cwksocial.api\\cwksocial.application\\userprofiles\\userprofileserrormessages.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{08BA266E-09A3-42D6-AA5A-77B348B675E1}|CwkSocial.Application\\CwkSocial.Application.csproj|solutionrelative:cwksocial.application\\userprofiles\\userprofileserrormessages.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{F0318393-66CA-4989-BFB6-93DBEB7BF14E}|CwkSocial.Api\\CwkSocial.Api.csproj|c:\\users\\macak\\projects\\cwksocial.api\\cwksocial.api\\filters\\validateguidattribute.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F0318393-66CA-4989-BFB6-93DBEB7BF14E}|CwkSocial.Api\\CwkSocial.Api.csproj|solutionrelative:cwksocial.api\\filters\\validateguidattribute.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{08BA266E-09A3-42D6-AA5A-77B348B675E1}|CwkSocial.Application\\CwkSocial.Application.csproj|c:\\users\\macak\\projects\\cwksocial.api\\cwksocial.application\\posts\\queryhandlers\\getpostcommentshandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{08BA266E-09A3-42D6-AA5A-77B348B675E1}|CwkSocial.Application\\CwkSocial.Application.csproj|solutionrelative:cwksocial.application\\posts\\queryhandlers\\getpostcommentshandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{F0318393-66CA-4989-BFB6-93DBEB7BF14E}|CwkSocial.Api\\CwkSocial.Api.csproj|c:\\users\\macak\\projects\\cwksocial.api\\cwksocial.api\\controllers\\v1\\postscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F0318393-66CA-4989-BFB6-93DBEB7BF14E}|CwkSocial.Api\\CwkSocial.Api.csproj|solutionrelative:cwksocial.api\\controllers\\v1\\postscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{08BA266E-09A3-42D6-AA5A-77B348B675E1}|CwkSocial.Application\\CwkSocial.Application.csproj|c:\\users\\macak\\projects\\cwksocial.api\\cwksocial.application\\posts\\queryhandlers\\getpostbyidhandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{08BA266E-09A3-42D6-AA5A-77B348B675E1}|CwkSocial.Application\\CwkSocial.Application.csproj|solutionrelative:cwksocial.application\\posts\\queryhandlers\\getpostbyidhandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{08BA266E-09A3-42D6-AA5A-77B348B675E1}|CwkSocial.Application\\CwkSocial.Application.csproj|c:\\users\\macak\\projects\\cwksocial.api\\cwksocial.application\\posts\\commandhandlers\\addinteractionhandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{08BA266E-09A3-42D6-AA5A-77B348B675E1}|CwkSocial.Application\\CwkSocial.Application.csproj|solutionrelative:cwksocial.application\\posts\\commandhandlers\\addinteractionhandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{08BA266E-09A3-42D6-AA5A-77B348B675E1}|CwkSocial.Application\\CwkSocial.Application.csproj|c:\\users\\macak\\projects\\cwksocial.api\\cwksocial.application\\posts\\queryhandlers\\getallpostshandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{08BA266E-09A3-42D6-AA5A-77B348B675E1}|CwkSocial.Application\\CwkSocial.Application.csproj|solutionrelative:cwksocial.application\\posts\\queryhandlers\\getallpostshandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{366C63A7-0661-4522-87AF-15B20D95D6D3}|Cwk.Domain\\Cwk.Domain.csproj|c:\\users\\macak\\projects\\cwksocial.api\\cwk.domain\\aggregates\\postaggregate\\interactiontype.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{366C63A7-0661-4522-87AF-15B20D95D6D3}|Cwk.Domain\\Cwk.Domain.csproj|solutionrelative:cwk.domain\\aggregates\\postaggregate\\interactiontype.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{08BA266E-09A3-42D6-AA5A-77B348B675E1}|CwkSocial.Application\\CwkSocial.Application.csproj|c:\\users\\macak\\projects\\cwksocial.api\\cwksocial.application\\posts\\commandhandlers\\updateposthandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{08BA266E-09A3-42D6-AA5A-77B348B675E1}|CwkSocial.Application\\CwkSocial.Application.csproj|solutionrelative:cwksocial.application\\posts\\commandhandlers\\updateposthandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{08BA266E-09A3-42D6-AA5A-77B348B675E1}|CwkSocial.Application\\CwkSocial.Application.csproj|c:\\users\\macak\\projects\\cwksocial.api\\cwksocial.application\\posts\\queryhandlers\\getpostinteractionshandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{08BA266E-09A3-42D6-AA5A-77B348B675E1}|CwkSocial.Application\\CwkSocial.Application.csproj|solutionrelative:cwksocial.application\\posts\\queryhandlers\\getpostinteractionshandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{08BA266E-09A3-42D6-AA5A-77B348B675E1}|CwkSocial.Application\\CwkSocial.Application.csproj|c:\\users\\macak\\projects\\cwksocial.api\\cwksocial.application\\posts\\commandhandlers\\deleteposthandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{08BA266E-09A3-42D6-AA5A-77B348B675E1}|CwkSocial.Application\\CwkSocial.Application.csproj|solutionrelative:cwksocial.application\\posts\\commandhandlers\\deleteposthandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{F0318393-66CA-4989-BFB6-93DBEB7BF14E}|CwkSocial.Api\\CwkSocial.Api.csproj|c:\\users\\macak\\projects\\cwksocial.api\\cwksocial.api\\apiroutes.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F0318393-66CA-4989-BFB6-93DBEB7BF14E}|CwkSocial.Api\\CwkSocial.Api.csproj|solutionrelative:cwksocial.api\\apiroutes.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{08BA266E-09A3-42D6-AA5A-77B348B675E1}|CwkSocial.Application\\CwkSocial.Application.csproj|c:\\users\\macak\\projects\\cwksocial.api\\cwksocial.application\\posts\\commandhandlers\\createposthandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{08BA266E-09A3-42D6-AA5A-77B348B675E1}|CwkSocial.Application\\CwkSocial.Application.csproj|solutionrelative:cwksocial.application\\posts\\commandhandlers\\createposthandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{366C63A7-0661-4522-87AF-15B20D95D6D3}|Cwk.Domain\\Cwk.Domain.csproj|c:\\users\\macak\\projects\\cwksocial.api\\cwk.domain\\aggregates\\postaggregate\\post.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{366C63A7-0661-4522-87AF-15B20D95D6D3}|Cwk.Domain\\Cwk.Domain.csproj|solutionrelative:cwk.domain\\aggregates\\postaggregate\\post.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{08BA266E-09A3-42D6-AA5A-77B348B675E1}|CwkSocial.Application\\CwkSocial.Application.csproj|c:\\users\\macak\\projects\\cwksocial.api\\cwksocial.application\\posts\\commandhandlers\\addpostcommenthandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{08BA266E-09A3-42D6-AA5A-77B348B675E1}|CwkSocial.Application\\CwkSocial.Application.csproj|solutionrelative:cwksocial.application\\posts\\commandhandlers\\addpostcommenthandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{08BA266E-09A3-42D6-AA5A-77B348B675E1}|CwkSocial.Application\\CwkSocial.Application.csproj|c:\\users\\macak\\projects\\cwksocial.api\\cwksocial.application\\posts\\commands\\addinteraction.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{08BA266E-09A3-42D6-AA5A-77B348B675E1}|CwkSocial.Application\\CwkSocial.Application.csproj|solutionrelative:cwksocial.application\\posts\\commands\\addinteraction.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{08BA266E-09A3-42D6-AA5A-77B348B675E1}|CwkSocial.Application\\CwkSocial.Application.csproj|c:\\users\\macak\\projects\\cwksocial.api\\cwksocial.application\\identity\\commandhandlers\\registeridentityhandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{08BA266E-09A3-42D6-AA5A-77B348B675E1}|CwkSocial.Application\\CwkSocial.Application.csproj|solutionrelative:cwksocial.application\\identity\\commandhandlers\\registeridentityhandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{F0318393-66CA-4989-BFB6-93DBEB7BF14E}|CwkSocial.Api\\CwkSocial.Api.csproj|c:\\users\\macak\\projects\\cwksocial.api\\cwksocial.api\\contracts\\posts\\requests\\postinteractioncreate.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F0318393-66CA-4989-BFB6-93DBEB7BF14E}|CwkSocial.Api\\CwkSocial.Api.csproj|solutionrelative:cwksocial.api\\contracts\\posts\\requests\\postinteractioncreate.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{08BA266E-09A3-42D6-AA5A-77B348B675E1}|CwkSocial.Application\\CwkSocial.Application.csproj|c:\\users\\macak\\projects\\cwksocial.api\\cwksocial.application\\identity\\commandhandlers\\logincommandhandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{08BA266E-09A3-42D6-AA5A-77B348B675E1}|CwkSocial.Application\\CwkSocial.Application.csproj|solutionrelative:cwksocial.application\\identity\\commandhandlers\\logincommandhandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{08BA266E-09A3-42D6-AA5A-77B348B675E1}|CwkSocial.Application\\CwkSocial.Application.csproj|c:\\users\\macak\\projects\\cwksocial.api\\cwksocial.application\\posts\\queries\\getpostinteractions.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{08BA266E-09A3-42D6-AA5A-77B348B675E1}|CwkSocial.Application\\CwkSocial.Application.csproj|solutionrelative:cwksocial.application\\posts\\queries\\getpostinteractions.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{08BA266E-09A3-42D6-AA5A-77B348B675E1}|CwkSocial.Application\\CwkSocial.Application.csproj|c:\\users\\macak\\projects\\cwksocial.api\\cwksocial.application\\models\\operationresult.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{08BA266E-09A3-42D6-AA5A-77B348B675E1}|CwkSocial.Application\\CwkSocial.Application.csproj|solutionrelative:cwksocial.application\\models\\operationresult.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{F0318393-66CA-4989-BFB6-93DBEB7BF14E}|CwkSocial.Api\\CwkSocial.Api.csproj|c:\\users\\macak\\projects\\cwksocial.api\\cwksocial.api\\contracts\\posts\\responses\\postresponse.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F0318393-66CA-4989-BFB6-93DBEB7BF14E}|CwkSocial.Api\\CwkSocial.Api.csproj|solutionrelative:cwksocial.api\\contracts\\posts\\responses\\postresponse.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F0318393-66CA-4989-BFB6-93DBEB7BF14E}|CwkSocial.Api\\CwkSocial.Api.csproj|c:\\users\\macak\\projects\\cwksocial.api\\cwksocial.api\\contracts\\posts\\responses\\postcommentresponse.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F0318393-66CA-4989-BFB6-93DBEB7BF14E}|CwkSocial.Api\\CwkSocial.Api.csproj|solutionrelative:cwksocial.api\\contracts\\posts\\responses\\postcommentresponse.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -74,7 +78,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 2,
+          "SelectedChildIndex": 4,
           "Children": [
             {
               "$type": "Bookmark",
@@ -86,210 +90,223 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "CreateUserCommandHandler_bck.cs",
-              "DocumentMoniker": "C:\\Users\\macak\\projects\\CwkSocial.Api\\CwkSocial.Application\\UserProfiles\\CommandHandlers\\CreateUserCommandHandler_bck.cs",
-              "RelativeDocumentMoniker": "CwkSocial.Application\\UserProfiles\\CommandHandlers\\CreateUserCommandHandler_bck.cs",
-              "ToolTip": "C:\\Users\\macak\\projects\\CwkSocial.Api\\CwkSocial.Application\\UserProfiles\\CommandHandlers\\CreateUserCommandHandler_bck.cs",
-              "RelativeToolTip": "CwkSocial.Application\\UserProfiles\\CommandHandlers\\CreateUserCommandHandler_bck.cs",
-              "ViewState": "AgIAACMAAAAAAAAAAAAAwDQAAABEAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-07-19T11:17:00.963Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "GetUserProfileByIdHandler.cs",
-              "DocumentMoniker": "C:\\Users\\macak\\projects\\CwkSocial.Api\\CwkSocial.Application\\UserProfiles\\QueryHandlers\\GetUserProfileByIdHandler.cs",
-              "RelativeDocumentMoniker": "CwkSocial.Application\\UserProfiles\\QueryHandlers\\GetUserProfileByIdHandler.cs",
-              "ToolTip": "C:\\Users\\macak\\projects\\CwkSocial.Api\\CwkSocial.Application\\UserProfiles\\QueryHandlers\\GetUserProfileByIdHandler.cs",
-              "RelativeToolTip": "CwkSocial.Application\\UserProfiles\\QueryHandlers\\GetUserProfileByIdHandler.cs",
-              "ViewState": "AgIAABcAAAAAAAAAAAAQwCIAAABqAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-07-19T11:11:19.037Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "GetAllUserProfilesQueryHandler.cs",
-              "DocumentMoniker": "C:\\Users\\macak\\projects\\CwkSocial.Api\\CwkSocial.Application\\UserProfiles\\QueryHandlers\\GetAllUserProfilesQueryHandler.cs",
-              "RelativeDocumentMoniker": "CwkSocial.Application\\UserProfiles\\QueryHandlers\\GetAllUserProfilesQueryHandler.cs",
-              "ToolTip": "C:\\Users\\macak\\projects\\CwkSocial.Api\\CwkSocial.Application\\UserProfiles\\QueryHandlers\\GetAllUserProfilesQueryHandler.cs",
-              "RelativeToolTip": "CwkSocial.Application\\UserProfiles\\QueryHandlers\\GetAllUserProfilesQueryHandler.cs",
-              "ViewState": "AgIAABEAAAAAAAAAAAAAwAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-07-19T11:11:15.957Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "UpdateUserProfileBasicInfoHandler.cs",
-              "DocumentMoniker": "C:\\Users\\macak\\projects\\CwkSocial.Api\\CwkSocial.Application\\UserProfiles\\CommandHandlers\\UpdateUserProfileBasicInfoHandler.cs",
-              "RelativeDocumentMoniker": "CwkSocial.Application\\UserProfiles\\CommandHandlers\\UpdateUserProfileBasicInfoHandler.cs",
-              "ToolTip": "C:\\Users\\macak\\projects\\CwkSocial.Api\\CwkSocial.Application\\UserProfiles\\CommandHandlers\\UpdateUserProfileBasicInfoHandler.cs",
-              "RelativeToolTip": "CwkSocial.Application\\UserProfiles\\CommandHandlers\\UpdateUserProfileBasicInfoHandler.cs",
-              "ViewState": "AgIAAC4AAAAAAAAAAAAAAD8AAAAnAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-07-19T09:31:23.063Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "DeleteUserProfileHandler.cs",
-              "DocumentMoniker": "C:\\Users\\macak\\projects\\CwkSocial.Api\\CwkSocial.Application\\UserProfiles\\CommandHandlers\\DeleteUserProfileHandler.cs",
-              "RelativeDocumentMoniker": "CwkSocial.Application\\UserProfiles\\CommandHandlers\\DeleteUserProfileHandler.cs",
-              "ToolTip": "C:\\Users\\macak\\projects\\CwkSocial.Api\\CwkSocial.Application\\UserProfiles\\CommandHandlers\\DeleteUserProfileHandler.cs",
-              "RelativeToolTip": "CwkSocial.Application\\UserProfiles\\CommandHandlers\\DeleteUserProfileHandler.cs",
-              "ViewState": "AgIAABMAAAAAAAAAAAAzwCMAAAAeAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-07-19T09:20:32.505Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
               "DocumentIndex": 5,
-              "Title": "UserProfilesErrorMessages.cs",
-              "DocumentMoniker": "C:\\Users\\macak\\projects\\CwkSocial.Api\\CwkSocial.Application\\UserProfiles\\UserProfilesErrorMessages.cs",
-              "RelativeDocumentMoniker": "CwkSocial.Application\\UserProfiles\\UserProfilesErrorMessages.cs",
-              "ToolTip": "C:\\Users\\macak\\projects\\CwkSocial.Api\\CwkSocial.Application\\UserProfiles\\UserProfilesErrorMessages.cs",
-              "RelativeToolTip": "CwkSocial.Application\\UserProfiles\\UserProfilesErrorMessages.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAABVAAAAAAAAAA==",
+              "Title": "ValidateGuidAttribute.cs",
+              "DocumentMoniker": "C:\\Users\\macak\\projects\\CwkSocial.Api\\CwkSocial.Api\\Filters\\ValidateGuidAttribute.cs",
+              "RelativeDocumentMoniker": "CwkSocial.Api\\Filters\\ValidateGuidAttribute.cs",
+              "ToolTip": "C:\\Users\\macak\\projects\\CwkSocial.Api\\CwkSocial.Api\\Filters\\ValidateGuidAttribute.cs",
+              "RelativeToolTip": "CwkSocial.Api\\Filters\\ValidateGuidAttribute.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-07-19T08:49:38.417Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 6,
-              "Title": "GetPostCommentsHandler.cs",
-              "DocumentMoniker": "C:\\Users\\macak\\projects\\CwkSocial.Api\\CwkSocial.Application\\Posts\\QueryHandlers\\GetPostCommentsHandler.cs",
-              "RelativeDocumentMoniker": "CwkSocial.Application\\Posts\\QueryHandlers\\GetPostCommentsHandler.cs",
-              "ToolTip": "C:\\Users\\macak\\projects\\CwkSocial.Api\\CwkSocial.Application\\Posts\\QueryHandlers\\GetPostCommentsHandler.cs",
-              "RelativeToolTip": "CwkSocial.Application\\Posts\\QueryHandlers\\GetPostCommentsHandler.cs",
-              "ViewState": "AgIAABgAAAAAAAAAAAA1wCYAAAAzAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-07-19T08:46:33.647Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 7,
-              "Title": "GetPostByIdHandler.cs",
-              "DocumentMoniker": "C:\\Users\\macak\\projects\\CwkSocial.Api\\CwkSocial.Application\\Posts\\QueryHandlers\\GetPostByIdHandler.cs",
-              "RelativeDocumentMoniker": "CwkSocial.Application\\Posts\\QueryHandlers\\GetPostByIdHandler.cs",
-              "ToolTip": "C:\\Users\\macak\\projects\\CwkSocial.Api\\CwkSocial.Application\\Posts\\QueryHandlers\\GetPostByIdHandler.cs",
-              "RelativeToolTip": "CwkSocial.Application\\Posts\\QueryHandlers\\GetPostByIdHandler.cs",
-              "ViewState": "AgIAABEAAAAAAAAAAAAAwCIAAAAeAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-07-19T08:40:31.738Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 10,
-              "Title": "DeletePostHandler.cs",
-              "DocumentMoniker": "C:\\Users\\macak\\projects\\CwkSocial.Api\\CwkSocial.Application\\Posts\\CommandHandlers\\DeletePostHandler.cs",
-              "RelativeDocumentMoniker": "CwkSocial.Application\\Posts\\CommandHandlers\\DeletePostHandler.cs",
-              "ToolTip": "C:\\Users\\macak\\projects\\CwkSocial.Api\\CwkSocial.Application\\Posts\\CommandHandlers\\DeletePostHandler.cs",
-              "RelativeToolTip": "CwkSocial.Application\\Posts\\CommandHandlers\\DeletePostHandler.cs",
-              "ViewState": "AgIAACcAAAAAAAAAAAAYwD4AAAAzAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-07-19T08:36:30.155Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 11,
-              "Title": "CreatePostHandler.cs",
-              "DocumentMoniker": "C:\\Users\\macak\\projects\\CwkSocial.Api\\CwkSocial.Application\\Posts\\CommandHandlers\\CreatePostHandler.cs",
-              "RelativeDocumentMoniker": "CwkSocial.Application\\Posts\\CommandHandlers\\CreatePostHandler.cs",
-              "ToolTip": "C:\\Users\\macak\\projects\\CwkSocial.Api\\CwkSocial.Application\\Posts\\CommandHandlers\\CreatePostHandler.cs",
-              "RelativeToolTip": "CwkSocial.Application\\Posts\\CommandHandlers\\CreatePostHandler.cs",
-              "ViewState": "AgIAABsAAAAAAAAAAAAYwDAAAAAaAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-07-19T08:18:27.551Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 12,
-              "Title": "AddPostCommentHandler.cs",
-              "DocumentMoniker": "C:\\Users\\macak\\projects\\CwkSocial.Api\\CwkSocial.Application\\Posts\\CommandHandlers\\AddPostCommentHandler.cs",
-              "RelativeDocumentMoniker": "CwkSocial.Application\\Posts\\CommandHandlers\\AddPostCommentHandler.cs",
-              "ToolTip": "C:\\Users\\macak\\projects\\CwkSocial.Api\\CwkSocial.Application\\Posts\\CommandHandlers\\AddPostCommentHandler.cs",
-              "RelativeToolTip": "CwkSocial.Application\\Posts\\CommandHandlers\\AddPostCommentHandler.cs",
-              "ViewState": "AgIAAEIAAAAAAAAAAAAAADsAAAAyAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-07-19T08:17:24.459Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 13,
-              "Title": "RegisterIdentityHandler.cs",
-              "DocumentMoniker": "C:\\Users\\macak\\projects\\CwkSocial.Api\\CwkSocial.Application\\Identity\\CommandHandlers\\RegisterIdentityHandler.cs",
-              "RelativeDocumentMoniker": "CwkSocial.Application\\Identity\\CommandHandlers\\RegisterIdentityHandler.cs",
-              "ToolTip": "C:\\Users\\macak\\projects\\CwkSocial.Api\\CwkSocial.Application\\Identity\\CommandHandlers\\RegisterIdentityHandler.cs",
-              "RelativeToolTip": "CwkSocial.Application\\Identity\\CommandHandlers\\RegisterIdentityHandler.cs",
-              "ViewState": "AgIAABgAAAAAAAAAAAAAAI8AAAAJAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-07-19T08:15:24.304Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 14,
-              "Title": "LoginCommandHandler.cs",
-              "DocumentMoniker": "C:\\Users\\macak\\projects\\CwkSocial.Api\\CwkSocial.Application\\Identity\\CommandHandlers\\LoginCommandHandler.cs",
-              "RelativeDocumentMoniker": "CwkSocial.Application\\Identity\\CommandHandlers\\LoginCommandHandler.cs",
-              "ToolTip": "C:\\Users\\macak\\projects\\CwkSocial.Api\\CwkSocial.Application\\Identity\\CommandHandlers\\LoginCommandHandler.cs",
-              "RelativeToolTip": "CwkSocial.Application\\Identity\\CommandHandlers\\LoginCommandHandler.cs",
-              "ViewState": "AgIAAC0AAAAAAAAAAAAYwDoAAAAzAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-07-19T08:13:09.672Z",
+              "WhenOpened": "2026-07-20T18:43:30.719Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 8,
-              "Title": "GetAllPostsHandler.cs",
-              "DocumentMoniker": "C:\\Users\\macak\\projects\\CwkSocial.Api\\CwkSocial.Application\\Posts\\QueryHandlers\\GetAllPostsHandler.cs",
-              "RelativeDocumentMoniker": "CwkSocial.Application\\Posts\\QueryHandlers\\GetAllPostsHandler.cs",
-              "ToolTip": "C:\\Users\\macak\\projects\\CwkSocial.Api\\CwkSocial.Application\\Posts\\QueryHandlers\\GetAllPostsHandler.cs",
-              "RelativeToolTip": "CwkSocial.Application\\Posts\\QueryHandlers\\GetAllPostsHandler.cs",
-              "ViewState": "AgIAAA8AAAAAAAAAAAAAACMAAAAzAAAAAAAAAA==",
+              "Title": "InteractionType.cs",
+              "DocumentMoniker": "C:\\Users\\macak\\projects\\CwkSocial.Api\\Cwk.Domain\\Aggregates\\PostAggregate\\InteractionType.cs",
+              "RelativeDocumentMoniker": "Cwk.Domain\\Aggregates\\PostAggregate\\InteractionType.cs",
+              "ToolTip": "C:\\Users\\macak\\projects\\CwkSocial.Api\\Cwk.Domain\\Aggregates\\PostAggregate\\InteractionType.cs",
+              "RelativeToolTip": "Cwk.Domain\\Aggregates\\PostAggregate\\InteractionType.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-07-19T07:03:08.511Z",
+              "WhenOpened": "2026-07-20T18:28:26.958Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 15,
-              "Title": "OperationResult.cs",
-              "DocumentMoniker": "C:\\Users\\macak\\projects\\CwkSocial.Api\\CwkSocial.Application\\Models\\OperationResult.cs",
-              "RelativeDocumentMoniker": "CwkSocial.Application\\Models\\OperationResult.cs",
-              "ToolTip": "C:\\Users\\macak\\projects\\CwkSocial.Api\\CwkSocial.Application\\Models\\OperationResult.cs",
-              "RelativeToolTip": "CwkSocial.Application\\Models\\OperationResult.cs",
-              "ViewState": "AgIAAAwAAAAAAAAAAAA1wBoAAABTAAAAAAAAAA==",
+              "DocumentIndex": 0,
+              "Title": "UserProfileMappings.cs",
+              "DocumentMoniker": "C:\\Users\\macak\\projects\\CwkSocial.Api\\CwkSocial.Api\\MappingProfiles\\UserProfileMappings.cs",
+              "RelativeDocumentMoniker": "CwkSocial.Api\\MappingProfiles\\UserProfileMappings.cs",
+              "ToolTip": "C:\\Users\\macak\\projects\\CwkSocial.Api\\CwkSocial.Api\\MappingProfiles\\UserProfileMappings.cs",
+              "RelativeToolTip": "CwkSocial.Api\\MappingProfiles\\UserProfileMappings.cs",
+              "ViewState": "AgIAAAkAAAAAAAAAAAAAABAAAAA1AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-07-19T05:41:51.903Z",
+              "WhenOpened": "2026-07-20T16:37:36.722Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "AddInteractionHandler.cs",
+              "DocumentMoniker": "C:\\Users\\macak\\projects\\CwkSocial.Api\\CwkSocial.Application\\Posts\\CommandHandlers\\AddInteractionHandler.cs",
+              "RelativeDocumentMoniker": "CwkSocial.Application\\Posts\\CommandHandlers\\AddInteractionHandler.cs",
+              "ToolTip": "C:\\Users\\macak\\projects\\CwkSocial.Api\\CwkSocial.Application\\Posts\\CommandHandlers\\AddInteractionHandler.cs",
+              "RelativeToolTip": "CwkSocial.Application\\Posts\\CommandHandlers\\AddInteractionHandler.cs",
+              "ViewState": "AgIAAB8AAAAAAAAAAIAwwCoAAAAQAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-07-20T11:42:08.516Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 12,
+              "Title": "AddInteraction.cs",
+              "DocumentMoniker": "C:\\Users\\macak\\projects\\CwkSocial.Api\\CwkSocial.Application\\Posts\\Commands\\AddInteraction.cs",
+              "RelativeDocumentMoniker": "CwkSocial.Application\\Posts\\Commands\\AddInteraction.cs",
+              "ToolTip": "C:\\Users\\macak\\projects\\CwkSocial.Api\\CwkSocial.Application\\Posts\\Commands\\AddInteraction.cs",
+              "RelativeToolTip": "CwkSocial.Application\\Posts\\Commands\\AddInteraction.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAAoAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-07-20T11:34:25.376Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 13,
+              "Title": "PostInteractionCreate.cs",
+              "DocumentMoniker": "C:\\Users\\macak\\projects\\CwkSocial.Api\\CwkSocial.Api\\Contracts\\Posts\\Requests\\PostInteractionCreate.cs",
+              "RelativeDocumentMoniker": "CwkSocial.Api\\Contracts\\Posts\\Requests\\PostInteractionCreate.cs",
+              "ToolTip": "C:\\Users\\macak\\projects\\CwkSocial.Api\\CwkSocial.Api\\Contracts\\Posts\\Requests\\PostInteractionCreate.cs",
+              "RelativeToolTip": "CwkSocial.Api\\Contracts\\Posts\\Requests\\PostInteractionCreate.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAAxAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-07-20T10:54:52.025Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "Post.cs",
+              "DocumentMoniker": "C:\\Users\\macak\\projects\\CwkSocial.Api\\Cwk.Domain\\Aggregates\\PostAggregate\\Post.cs",
+              "RelativeDocumentMoniker": "Cwk.Domain\\Aggregates\\PostAggregate\\Post.cs",
+              "ToolTip": "C:\\Users\\macak\\projects\\CwkSocial.Api\\Cwk.Domain\\Aggregates\\PostAggregate\\Post.cs",
+              "RelativeToolTip": "Cwk.Domain\\Aggregates\\PostAggregate\\Post.cs",
+              "ViewState": "AgIAAFUAAAAAAAAAAAAcwAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-07-20T08:10:35.537Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 9,
-              "Title": "UpdatePostHandler.cs",
-              "DocumentMoniker": "C:\\Users\\macak\\projects\\CwkSocial.Api\\CwkSocial.Application\\Posts\\CommandHandlers\\UpdatePostHandler.cs",
-              "RelativeDocumentMoniker": "CwkSocial.Application\\Posts\\CommandHandlers\\UpdatePostHandler.cs",
-              "ToolTip": "C:\\Users\\macak\\projects\\CwkSocial.Api\\CwkSocial.Application\\Posts\\CommandHandlers\\UpdatePostHandler.cs",
-              "RelativeToolTip": "CwkSocial.Application\\Posts\\CommandHandlers\\UpdatePostHandler.cs",
-              "ViewState": "AgIAAC0AAAAAAAAAAAAYwD0AAAANAAAAAAAAAA==",
+              "Title": "GetPostInteractionsHandler.cs",
+              "DocumentMoniker": "C:\\Users\\macak\\projects\\CwkSocial.Api\\CwkSocial.Application\\Posts\\QueryHandlers\\GetPostInteractionsHandler.cs",
+              "RelativeDocumentMoniker": "CwkSocial.Application\\Posts\\QueryHandlers\\GetPostInteractionsHandler.cs",
+              "ToolTip": "C:\\Users\\macak\\projects\\CwkSocial.Api\\CwkSocial.Application\\Posts\\QueryHandlers\\GetPostInteractionsHandler.cs",
+              "RelativeToolTip": "CwkSocial.Application\\Posts\\QueryHandlers\\GetPostInteractionsHandler.cs",
+              "ViewState": "AgIAABYAAAAAAAAAAAAQwCAAAAAzAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-07-18T20:23:09.543Z",
+              "WhenOpened": "2026-07-20T07:20:35.55Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 14,
+              "Title": "GetPostInteractions.cs",
+              "DocumentMoniker": "C:\\Users\\macak\\projects\\CwkSocial.Api\\CwkSocial.Application\\Posts\\Queries\\GetPostInteractions.cs",
+              "RelativeDocumentMoniker": "CwkSocial.Application\\Posts\\Queries\\GetPostInteractions.cs",
+              "ToolTip": "C:\\Users\\macak\\projects\\CwkSocial.Api\\CwkSocial.Application\\Posts\\Queries\\GetPostInteractions.cs",
+              "RelativeToolTip": "CwkSocial.Application\\Posts\\Queries\\GetPostInteractions.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAAoAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-07-20T07:11:57.126Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "ApiRoutes.cs",
+              "DocumentMoniker": "C:\\Users\\macak\\projects\\CwkSocial.Api\\CwkSocial.Api\\ApiRoutes.cs",
+              "RelativeDocumentMoniker": "CwkSocial.Api\\ApiRoutes.cs",
+              "ToolTip": "C:\\Users\\macak\\projects\\CwkSocial.Api\\CwkSocial.Api\\ApiRoutes.cs",
+              "RelativeToolTip": "CwkSocial.Api\\ApiRoutes.cs",
+              "ViewState": "AgIAAAoAAAAAAAAAAAAQwBMAAAAvAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-07-19T21:28:27.587Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "PostsController.cs",
+              "DocumentMoniker": "C:\\Users\\macak\\projects\\CwkSocial.Api\\CwkSocial.Api\\Controllers\\V1\\PostsController.cs",
+              "RelativeDocumentMoniker": "CwkSocial.Api\\Controllers\\V1\\PostsController.cs",
+              "ToolTip": "C:\\Users\\macak\\projects\\CwkSocial.Api\\CwkSocial.Api\\Controllers\\V1\\PostsController.cs",
+              "RelativeToolTip": "CwkSocial.Api\\Controllers\\V1\\PostsController.cs",
+              "ViewState": "AgIAAKwAAAAAAAAAAAAqwOAAAAAeAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-07-19T21:00:52.776Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "PostMappings.cs",
+              "DocumentMoniker": "C:\\Users\\macak\\projects\\CwkSocial.Api\\CwkSocial.Api\\MappingProfiles\\PostMappings.cs",
+              "RelativeDocumentMoniker": "CwkSocial.Api\\MappingProfiles\\PostMappings.cs",
+              "ToolTip": "C:\\Users\\macak\\projects\\CwkSocial.Api\\CwkSocial.Api\\MappingProfiles\\PostMappings.cs",
+              "RelativeToolTip": "CwkSocial.Api\\MappingProfiles\\PostMappings.cs",
+              "ViewState": "AgIAAAgAAAAAAAAAAAAAwBcAAABZAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-07-19T19:53:27.527Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 15,
+              "Title": "PostResponse.cs",
+              "DocumentMoniker": "C:\\Users\\macak\\projects\\CwkSocial.Api\\CwkSocial.Api\\Contracts\\Posts\\Responses\\PostResponse.cs",
+              "RelativeDocumentMoniker": "CwkSocial.Api\\Contracts\\Posts\\Responses\\PostResponse.cs",
+              "ToolTip": "C:\\Users\\macak\\projects\\CwkSocial.Api\\CwkSocial.Api\\Contracts\\Posts\\Responses\\PostResponse.cs",
+              "RelativeToolTip": "CwkSocial.Api\\Contracts\\Posts\\Responses\\PostResponse.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-07-19T18:52:44.678Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 16,
+              "Title": "PostCommentResponse.cs",
+              "DocumentMoniker": "C:\\Users\\macak\\projects\\CwkSocial.Api\\CwkSocial.Api\\Contracts\\Posts\\Responses\\PostCommentResponse.cs",
+              "RelativeDocumentMoniker": "CwkSocial.Api\\Contracts\\Posts\\Responses\\PostCommentResponse.cs",
+              "ToolTip": "C:\\Users\\macak\\projects\\CwkSocial.Api\\CwkSocial.Api\\Contracts\\Posts\\Responses\\PostCommentResponse.cs",
+              "RelativeToolTip": "CwkSocial.Api\\Contracts\\Posts\\Responses\\PostCommentResponse.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-07-19T18:37:23.902Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "InteractionUser.cs",
+              "DocumentMoniker": "C:\\Users\\macak\\projects\\CwkSocial.Api\\CwkSocial.Api\\Contracts\\Posts\\Responses\\InteractionUser.cs",
+              "RelativeDocumentMoniker": "CwkSocial.Api\\Contracts\\Posts\\Responses\\InteractionUser.cs",
+              "ToolTip": "C:\\Users\\macak\\projects\\CwkSocial.Api\\CwkSocial.Api\\Contracts\\Posts\\Responses\\InteractionUser.cs",
+              "RelativeToolTip": "CwkSocial.Api\\Contracts\\Posts\\Responses\\InteractionUser.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAQAAAAvAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-07-19T18:37:00.621Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "PostInteraction.cs",
+              "DocumentMoniker": "C:\\Users\\macak\\projects\\CwkSocial.Api\\CwkSocial.Api\\Contracts\\Posts\\Responses\\PostInteraction.cs",
+              "RelativeDocumentMoniker": "CwkSocial.Api\\Contracts\\Posts\\Responses\\PostInteraction.cs",
+              "ToolTip": "C:\\Users\\macak\\projects\\CwkSocial.Api\\CwkSocial.Api\\Contracts\\Posts\\Responses\\PostInteraction.cs",
+              "RelativeToolTip": "CwkSocial.Api\\Contracts\\Posts\\Responses\\PostInteraction.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAAzAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-07-19T18:06:14.535Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "PostInteraction.cs",
+              "DocumentMoniker": "C:\\Users\\macak\\projects\\CwkSocial.Api\\Cwk.Domain\\Aggregates\\PostAggregate\\PostInteraction.cs",
+              "RelativeDocumentMoniker": "Cwk.Domain\\Aggregates\\PostAggregate\\PostInteraction.cs",
+              "ToolTip": "C:\\Users\\macak\\projects\\CwkSocial.Api\\Cwk.Domain\\Aggregates\\PostAggregate\\PostInteraction.cs",
+              "RelativeToolTip": "Cwk.Domain\\Aggregates\\PostAggregate\\PostInteraction.cs",
+              "ViewState": "AgIAAAkAAAAAAAAAAAAAABoAAAAuAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-07-19T15:36:49.39Z",
               "EditorCaption": ""
             }
           ]

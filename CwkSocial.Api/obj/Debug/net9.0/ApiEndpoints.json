@@ -164,6 +164,43 @@
     "ReturnTypes": []
   },
   {
+    "ContainingType": "CwkSocial.Api.Controllers.V1.PostsController",
+    "Method": "GetPostInteractions",
+    "RelativePath": "api/v1/Posts/{postId}/interactions",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "postId",
+        "Type": "System.String",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "CwkSocial.Api.Controllers.V1.PostsController",
+    "Method": "AddPostInteraction",
+    "RelativePath": "api/v1/Posts/{postId}/interactions",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "postId",
+        "Type": "System.String",
+        "IsRequired": true
+      },
+      {
+        "Name": "interaction",
+        "Type": "CwkSocial.Api.Contracts.Posts.Requests.PostInteractionCreate",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
     "ContainingType": "CwkSocial.Api.Controllers.V1.UserProfilesController",
     "Method": "GetAllProfiles",
     "RelativePath": "api/v1/UserProfiles",

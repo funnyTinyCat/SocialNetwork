@@ -16,6 +16,9 @@ namespace CwkSocial.Api
             public const string idRoute = "{id}";
             public const string postComments = "{postId}/comments";
             public const string commentById = "{postId}/comments/{commentId}";
+            public const string AddInteraction = "{postId}/interactions";
+            public const string InteractionById = "{postId}/interactions/{interactionId}";
+            public const string PostInteractions = "{postId}/interactions";
         }
 
         public static class Identity

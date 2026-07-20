@@ -89,9 +89,14 @@ namespace CwkSocial.Dal.Migrations
                     b.Property<Guid>("PostId")
                         .HasColumnType("uniqueidentifier");
 
+                    b.Property<Guid?>("UserProfileId")
+                        .HasColumnType("uniqueidentifier");
+
                     b.HasKey("InteractionId");
 
                     b.HasIndex("PostId");
+
+                    b.HasIndex("UserProfileId");
 
                     b.ToTable("PostInteraction");
                 });
@@ -312,6 +317,12 @@ namespace CwkSocial.Dal.Migrations
                         .HasForeignKey("PostId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
+
+                    b.HasOne("Cwk.Domain.Aggregates.UserProfileAggregate.UserProfile", "UserProfile")
+                        .WithMany()
+                        .HasForeignKey("UserProfileId");
+
+                    b.Navigation("UserProfile");
                 });
 
             modelBuilder.Entity("Cwk.Domain.Aggregates.UserProfileAggregate.UserProfile", b =>
